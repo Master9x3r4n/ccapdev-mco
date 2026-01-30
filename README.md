@@ -1,6 +1,6 @@
 # Apdev-Mco Setup
 
-This template should help get you started developing with Vue 3 in Vite.
+This template should help get you started developing with Vue 3 in Vite with TailwindCss v4
 
 ## Recommended IDE Setup
 
@@ -23,6 +23,12 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 
 ```sh
 npm install
+```
+
+### Install Tailwind
+
+```sh
+npm install tailwindcss @tailwindcss/vite
 ```
 
 ### Compile and Hot-Reload for Development
