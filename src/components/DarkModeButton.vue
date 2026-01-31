@@ -1,6 +1,7 @@
 <script setup>
     import {ref, watch} from "vue"
 
+	// Object data for dark and light mode themes
 	const theme = {
 		"light": {
 			"src": "src/assets/darkmode-assets/sun-svgrepo-com.svg",
@@ -12,27 +13,24 @@
 		}
 	}
 
-    const darkMode = ref(false)
-	const iconSrc = ref(theme.light)
+    const darkMode = ref(false) // ref for dark mode toggle
+	const iconSrc = ref(theme.light) // ref for current theme
 
+	// trigger dark mode call back when darkMode boolean is changed
     watch(darkMode, (enabled) => {
+		// DOM manipulation is used to avoid v-binding class attributes
         document.documentElement.classList.toggle('dark', enabled)
     })
 
+	// Callback function to toggle dark mode
     const toggleDarkMode = () => {
-      darkMode.value = !darkMode.value
-      if (darkMode.value) {
-		iconSrc.value = theme.dark
-	  } else {
-		iconSrc.value = theme.light
-	  }
-	  console.log(iconSrc.value.src)
+		darkMode.value = !darkMode.value;
+		iconSrc.value = darkMode.value ? theme.dark : theme.light;
     }
 </script>
 
 <template>
-  	<button class="border-2  rounded-2xl p-2 m-4 dark:bg-black" @click="toggleDarkMode()">
-		<img :src="iconSrc.src" :alt="iconSrc.alt"
-		width = "20px" height= "20px">
+  	<button @click="toggleDarkMode()" class="border-2 rounded-2xl p-2 dark:bg-black">
+		<img :src="iconSrc.src" :alt="iconSrc.alt" width = "20px" height= "20px">
 	</button>
 </template>
