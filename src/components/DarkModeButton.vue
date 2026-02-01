@@ -16,17 +16,17 @@
     const darkMode = ref(false) // ref for dark mode toggle
 	const iconSrc = ref(theme.light) // ref for current theme
 
-	// trigger dark mode call back when darkMode boolean is changed
+	// Trigger dark mode call back when darkMode boolean is changed
     watch(darkMode, (enabled) => {
-		// DOM manipulation is used to avoid v-binding class attributes
+		iconSrc.value = darkMode.value ? theme.dark : theme.light;
         document.documentElement.classList.toggle('dark', enabled)
     })
 
 	// Callback function to toggle dark mode
     const toggleDarkMode = () => {
 		darkMode.value = !darkMode.value;
-		iconSrc.value = darkMode.value ? theme.dark : theme.light;
     }
+
 </script>
 
 <template>
