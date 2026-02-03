@@ -1,4 +1,5 @@
 <script setup>
+import ApartmentCardSmall from '../apartment-cards/ApartmentCardSmall.vue';
 import CarouselContent from './CarouselContent.vue';
 import CarouselScrollButton from './CarouselScrollButton.vue';
 import {ref} from 'vue';
@@ -22,15 +23,18 @@ const scroll = (direction) => {
 </script>
 
 <template>
-<div class = "relative max-w-4xl mx-auto flex justify-center items-center w-[288px]">
+<div class = "relative max-w-4xl mx-auto flex justify-center items-center w-[440px]">
     <div ref = "carouselContent"
     class = "overflow-x-auto overflow-y-hidden scroll-smooth hide-scrollbar w-full">
         <CarouselContent>
             <!-- Content -->
             <template v-for="i in items" :key="i.id">
-                <div class = "card-container h-48 flex-none basis-[18rem] flex justify-center items-center gap-4">
+                <!-- <div class = "card-container h-48 flex-none basis-[18rem] flex justify-center items-center gap-4">
                     {{ i }}
-                </div>
+                </div> -->
+                <ApartmentCardSmall class="flex shrink-0">
+                    {{ i }}
+                </ApartmentCardSmall>
             </template>
         </CarouselContent>
     </div>
