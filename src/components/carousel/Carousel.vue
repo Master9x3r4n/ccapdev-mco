@@ -37,7 +37,9 @@ const scroll = (direction) => {
                     {{ i }}
                 </div> -->
                 <ApartmentCardSmall class="flex shrink-0">
-                    <template v-slot:header>Apartment {{ i }}</template>
+                    <template #header>
+                        Apartment {{ i }}
+                    </template>
                 </ApartmentCardSmall>
             </template>
         </CarouselContent>
