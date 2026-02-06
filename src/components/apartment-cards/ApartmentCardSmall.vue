@@ -14,7 +14,7 @@
 
         <!-- Frame -->
        <div class="
-       absolute border
+       absolute
        top-[45%] w-[90%] h-[50%]
        ">
             <slot></slot>
