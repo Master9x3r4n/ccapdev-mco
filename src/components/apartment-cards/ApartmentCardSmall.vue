@@ -1,4 +1,5 @@
 <script setup>
+import CardRating from '@/components/rating/CardRating.vue';    
 </script>
 
 <template>
@@ -17,7 +18,26 @@
        absolute
        top-[45%] w-[90%] h-[50%]
        ">
-            <slot></slot>
+            <!-- Upper Container -->
+            <div class="h-[50%] flex flex-col justify-between">
+                <!-- Apartment Name -->
+                <div>
+                    <h1 class="font-bold text-[32px] leading-10">
+                        <slot name="header">Apartment Name</slot>
+                    </h1>
+                </div>
+
+                <!-- Apartment Description -->
+                <div>
+                    <p class="italic font-normal text-[20px] leading-6">
+                        <slot name="description">
+                            This apartment is very nice. It has very nice rooms and is placed very nicely.
+                        </slot>
+                    </p>
+                </div>
+            </div>
+
+            <CardRating />
        </div>
     </div>
 </template>
