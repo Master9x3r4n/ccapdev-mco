@@ -5,7 +5,7 @@
     <div class=
     "h-104.75 w-110 rounded-[25px] 
     p-0 shadow-2xl relative
-    bg-white">
+    bg-white flex flex-col items-center">
     <!-- Photo h-40%-->
         <div class=
         "w-full h-5/12 rounded-t-[25px] 
@@ -15,7 +15,7 @@
         <!-- Frame -->
        <div class="
        absolute border
-       top-[45%] left-1/12 w-[85%] h-[50%]
+       top-[45%] w-[90%] h-[50%]
        ">
             <slot></slot>
        </div>

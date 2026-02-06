@@ -19,7 +19,29 @@
     <!-- Small Card -->
     <TestContainer dir="col">
         <TestLabel>Sample Card</TestLabel>
-        <ApartmentCardSmall>Hello World!</ApartmentCardSmall>
+        <ApartmentCardSmall>
+            <!-- Upper Container -->
+            <div class="h-[50%] flex flex-col justify-between">
+                <!-- Apartment Name -->
+                <div>
+                    <h1 class="font-bold text-[32px] leading-10">
+                        Apartment Name</h1>
+                </div>
+
+                <!-- Apartment Description -->
+                 <div>
+                    <p class="italic font-normal text-[20px] leading-6">
+                        This apartment is very nice. It has very nice rooms and is placed very nicely.</p>
+                 </div>
+            </div>
+
+            <!-- Lower Review Container -->
+            <div>
+                <div>
+                    
+                </div>
+            </div>
+        </ApartmentCardSmall>
     </TestContainer>
 
     <!-- Carousel -->

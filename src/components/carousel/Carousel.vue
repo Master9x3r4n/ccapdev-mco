@@ -9,14 +9,18 @@ const items = ref(props.items);
 const carouselContent = ref();
 
 const scroll = (direction) => {
-    const container = carouselContent.value;
-    if (container) {        
-        const scrollValue = container.clientWidth;
+    const carousel = carouselContent.value;
+    if (carousel) {        
+        const scrollValue = carousel.clientWidth;
 
-        container.scrollBy({
+        console.log(carousel.scrollBy())
+
+        carousel.scrollBy({
             left: direction == 'left' ? -scrollValue : scrollValue,
             behavior: 'smooth'
         })
+
+        // Source btw: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
     }
 };
 
@@ -61,9 +65,9 @@ const scroll = (direction) => {
     scrollbar-width: none;  
 }
 
-.card-container {
+/* .card-container {
     @apply p-2 border-4 rounded-2xl text-white shrink-0
          bg-[#169cda] border-[#0f77a7]
          dark:text-white dark:bg-[#0c2f8e] dark:border-[#0a2878] dark:font-bold;
-}
+} */
 </style>
