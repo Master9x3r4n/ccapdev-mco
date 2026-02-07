@@ -33,10 +33,9 @@ const scroll = (direction) => {
         <CarouselContent>
             <!-- Content -->
             <template v-for="i in items" :key="i.id">
-                <!-- <div class = "card-container h-48 flex-none basis-[18rem] flex justify-center items-center gap-4">
-                    {{ i }}
-                </div> -->
-                <ApartmentCardSmall class="flex shrink-0">
+                <ApartmentCardSmall 
+                :ratingData="{rating: 5 - i + 0.5, reviewCount: i * 6}"
+                class="flex shrink-0">
                     <template #header>
                         Apartment {{ i }}
                     </template>

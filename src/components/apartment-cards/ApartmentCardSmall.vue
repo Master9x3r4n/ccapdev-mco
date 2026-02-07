@@ -1,5 +1,15 @@
 <script setup>
-import CardRating from '@/components/rating/CardRating.vue';    
+import CardRating from '@/components/rating/CardRating.vue';  
+
+const props = defineProps({
+    ratingData: {
+        default: {
+            rating: 4,
+            reviewCount: 32
+        }
+    }
+})
+
 </script>
 
 <template>
@@ -37,7 +47,9 @@ import CardRating from '@/components/rating/CardRating.vue';
                 </div>
             </div>
 
-            <CardRating />
+            <CardRating 
+            :rating="ratingData['rating']" 
+            :reviewCount="ratingData['reviewCount']"/>
        </div>
     </div>
 </template>
