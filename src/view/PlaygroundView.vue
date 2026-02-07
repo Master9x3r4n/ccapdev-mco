@@ -8,10 +8,7 @@
     import OverallRating from '@/components/side-cards/OverallRating.vue';
     import ReviewCard from '@/components/review-cards/ReviewCard.vue';
 
-    import {ref} from 'vue'
-import ThumbsButton from '@/components/thumbs-buttons/ThumbsButton.vue';
-
-    const items=ref([1, 2, 3, 4, 5])
+    const items= [1, 2, 3, 4, 5]
 
     const ratings = [
         {
@@ -57,11 +54,43 @@ import ThumbsButton from '@/components/thumbs-buttons/ThumbsButton.vue';
             </ApartmentCardLarge>
         </template>
     </TestContainer>
-
+    
     <!-- Carousel -->
     <TestContainer dir="col">
         <TestLabel>Carousel</TestLabel>
-        <Carousel :items="items"/>
+        <Carousel :count="1">
+            <!-- Content -->
+            <template #content>
+                <template v-for="i in items">
+                    <ApartmentCardSmall 
+                    :ratingData="{rating: 5 - i + 0.5, reviewCount: (i)* 6}"
+                    class="flex shrink-0 snap-start">
+                        <template #header>
+                            Apartment {{ i }}
+                        </template>
+                    </ApartmentCardSmall>
+                </template>
+            </template>
+        </Carousel>
+    </TestContainer>
+
+    <!-- Long Carousel -->
+    <TestContainer dir="col">
+        <TestLabel>Carousel Length Test</TestLabel>
+        <Carousel :count="3">
+            <!-- Content -->
+            <template #content>
+                <template v-for="i in 10">
+                    <ApartmentCardSmall 
+                    :ratingData="{rating: 4, reviewCount: (i)* 6}"
+                    class="flex shrink-0 snap-start">
+                        <template #header>
+                            Apartment {{ i }}
+                        </template>
+                    </ApartmentCardSmall>
+                </template>
+            </template>
+        </Carousel>
     </TestContainer>
 
     <!-- Overall Rating -->
