@@ -1,4 +1,6 @@
 <script setup>
+import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
+
 const props = defineProps({
     ownerReply: {
         type: String,
@@ -67,15 +69,17 @@ const props = defineProps({
         </div>
 
         <!-- Footer Container -->
-        <div class="border w-full h-[10%] flex justify-between items-center">
+        <div class="w-full h-[10%] flex justify-between items-center pl-2 pr-2">
             <!-- Show More -->
             <div class="font-semibold underline text-[16px] leading-6">
                 Show More
             </div>
 
             <!-- Upvote -->
-            <div class="italic font-normal text-[16px] leading-6 flex">
-                👍 -69 👎
+            <div class="italic font-normal text-[16px] leading-6 flex items-center justify-around gap-2">
+                <ThumbsButton direction="up"/>
+                <div>-69</div>
+                <ThumbsButton direction="down"/>
             </div>
         </div>
 

@@ -9,27 +9,28 @@
     import ReviewCard from '@/components/review-cards/ReviewCard.vue';
 
     import {ref} from 'vue'
+import ThumbsButton from '@/components/thumbs-buttons/ThumbsButton.vue';
 
     const items=ref([1, 2, 3, 4, 5])
 
     const ratings = [
-            {
-                name: "Attribute 1",
-                rating: 4.0
-            },
-            {
-                name: "Attribute 2",
-                rating: 3.5
-            },
-            {
-                name: "Attribute 3",
-                rating: 2.5
-            },
-            {
-                name: "Attribute 4",
-                rating: 1.5
-            }
-        ]
+        {
+            name: "Attribute 1",
+            rating: 4.0
+        },
+        {
+            name: "Attribute 2",
+            rating: 3.5
+        },
+        {
+            name: "Attribute 3",
+            rating: 2.5
+        },
+        {
+            name: "Attribute 4",
+            rating: 5
+        }
+    ]
 </script>
 
 <template>
@@ -80,5 +81,10 @@
     </TestContainer>
     
     <!-- Review Card Large -->
+    <TestContainer dir="col">
+        <TestLabel>Full Review (STATIC)</TestLabel>
+        
+    </TestContainer>
+
     <!-- Filter Buttons -->
 </template>
