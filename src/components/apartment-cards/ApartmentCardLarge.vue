@@ -15,7 +15,7 @@ const props = defineProps({
 <template>
     <!-- 3x W 0.8x H -->
     <div class=
-    "h-75 w-310 rounded-[25px] 
+    "h-75 w-306 rounded-[25px] 
     p-0 shadow-2xl relative
     bg-white flex flex-row items-center">
         <!-- Photo h-40%-->

@@ -7,6 +7,8 @@
     import TestLabel from '@/components/test-components/TestLabel.vue';
 
     import {ref} from 'vue'
+import OverallRating from '@/components/side-cards/OverallRating.vue';
+import ReviewCard from '@/components/review-cards/ReviewCard.vue';
 
     const items=ref([1, 2, 3, 4, 5])
 </script>
@@ -41,4 +43,22 @@
         <TestLabel>Carousel</TestLabel>
         <Carousel :items="items"/>
     </TestContainer>
+
+    <!-- Overall Rating -->
+    <TestContainer dir="col">
+        <TestLabel>Overall Rating Box</TestLabel>
+        <OverallRating />
+    </TestContainer>
+
+    
+    <!-- Review Card Small -->
+    <TestContainer dir="col">
+        <TestLabel>Review Cards</TestLabel>
+        <div class="flex justify-around">
+            <ReviewCard />
+        </div>
+    </TestContainer>
+    
+    <!-- Review Card Large -->
+    <!-- Filter Buttons -->
 </template>
