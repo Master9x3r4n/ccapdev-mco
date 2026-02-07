@@ -1,5 +1,38 @@
 <script setup>
 
+const props = defineProps({
+    ratings: {
+        type: Array,
+        default: [
+            {
+                name: "Attribute 1",
+                rating: 0
+            },
+            {
+                name: "Attribute 2",
+                rating: 0
+            },
+            {
+                name: "Attribute 3",
+                rating: 0
+            },
+            {
+                name: "Attribute 4",
+                rating: 0
+            }
+        ]
+    }
+})
+
+
+const getOverallAttribute = () => {
+    let sum = 0;
+    for (let j =0; j < props.ratings.length; j ++) {
+        sum += props.ratings[j].rating;
+    }
+    return (sum / props.ratings.length).toFixed(1)
+}
+
 </script>
 
 <template>
@@ -15,7 +48,7 @@
             <!-- Rating -->
             <div class="flex justify-between items-center w-3/12">
                 <img src="@\assets\rating-assets\star-full.svg" width="32px">
-                <div>4.0</div>
+                <div>{{ getOverallAttribute() }}</div>
             </div>
         </div>
 
@@ -24,15 +57,15 @@
         </div>
 
         <!-- Attributes -->
-        <template v-for="i in 4">
+        <template v-for="i in props.ratings.length">
             <div class="w-full text-2xl leading-7 flex items-center justify-between">
-                <!-- Attribute -->
-                <div>Attribute</div>
+                <!-- Attribute Name -->
+                <div>{{ props.ratings[i-1].name }}</div>
 
                 <!-- Rating -->
                 <div class="flex justify-between items-center w-[20%]">
                     <img src="@\assets\rating-assets\star-full.svg" width="24px">
-                    <div>4.0</div>
+                    <div>{{ props.ratings[i-1].rating.toFixed(1) }}</div>
                 </div>
             </div>
         </template>

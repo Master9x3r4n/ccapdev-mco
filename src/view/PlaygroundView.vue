@@ -5,12 +5,31 @@
     import DarkModeButton from '@/components/DarkModeButton.vue';
     import TestContainer from '@/components/test-components/TestContainer.vue';
     import TestLabel from '@/components/test-components/TestLabel.vue';
+    import OverallRating from '@/components/side-cards/OverallRating.vue';
+    import ReviewCard from '@/components/review-cards/ReviewCard.vue';
 
     import {ref} from 'vue'
-import OverallRating from '@/components/side-cards/OverallRating.vue';
-import ReviewCard from '@/components/review-cards/ReviewCard.vue';
 
     const items=ref([1, 2, 3, 4, 5])
+
+    const ratings = [
+            {
+                name: "Attribute 1",
+                rating: 4.0
+            },
+            {
+                name: "Attribute 2",
+                rating: 3.5
+            },
+            {
+                name: "Attribute 3",
+                rating: 2.5
+            },
+            {
+                name: "Attribute 4",
+                rating: 1.5
+            }
+        ]
 </script>
 
 <template>
@@ -47,7 +66,7 @@ import ReviewCard from '@/components/review-cards/ReviewCard.vue';
     <!-- Overall Rating -->
     <TestContainer dir="col">
         <TestLabel>Overall Rating Box</TestLabel>
-        <OverallRating />
+        <OverallRating :ratings="ratings"/>
     </TestContainer>
 
     
