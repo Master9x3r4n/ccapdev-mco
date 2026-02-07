@@ -7,13 +7,13 @@
     import TestLabel from '@/components/test-components/TestLabel.vue';
 
     import {ref} from 'vue'
-    
-    const items = ref([1, 2, 3, 4, 5])
+
+    const items=ref([1, 2, 3, 4, 5])
 </script>
 
 <template>
     <!-- Dark Mode Button -->
-    <TestContainer>
+    <TestContainer dir="row">
         <TestLabel>Theme</TestLabel>
         <DarkModeButton />
     </TestContainer>
@@ -27,7 +27,13 @@
     <!-- Large Card -->
      <TestContainer dir="col">
         <TestLabel>Large Card</TestLabel>
-        <ApartmentCardLarge />
+        <template v-for="i in 2">
+            <ApartmentCardLarge 
+                :ratingData="{rating: 1.5 * (4-i), reviewCount: 69}"
+                class="m-1.5">
+                <template #header>Apartment {{ i }}</template>
+            </ApartmentCardLarge>
+        </template>
     </TestContainer>
 
     <!-- Carousel -->

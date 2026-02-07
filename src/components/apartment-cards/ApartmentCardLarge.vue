@@ -15,7 +15,7 @@ const props = defineProps({
 <template>
     <!-- 3x W 0.8x H -->
     <div class=
-    "h-84 w-310 rounded-[25px] 
+    "h-75 w-310 rounded-[25px] 
     p-0 shadow-2xl relative
     bg-white flex flex-row items-center">
         <!-- Photo h-40%-->
@@ -25,7 +25,7 @@ const props = defineProps({
         bg-gradient"></div>
 
         <!-- Frame -->
-       <div class=" absolute right-8 w-[36%] h-[90%]">
+       <div class=" absolute right-8 w-[36%] h-[80%]">
             <!-- Upper Container -->
             <div class="h-[75%] flex flex-col justify-end text-right gap-6">
                 <!-- Apartment Name -->

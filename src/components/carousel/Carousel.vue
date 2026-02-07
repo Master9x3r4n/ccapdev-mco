@@ -27,7 +27,8 @@ const scroll = (direction) => {
 </script>
 
 <template>
-<div class = "relative max-w-4xl mx-auto flex justify-center items-center w-[440px]">
+    <!-- NEED TO MAKE THIS RELATIVE -->
+<div class = "relative max-w-4xl mx-auto flex justify-center items-center w-105">
     <div ref = "carouselContent"
     class = "overflow-x-auto overflow-y-hidden scroll-smooth hide-scrollbar w-full">
         <CarouselContent>
