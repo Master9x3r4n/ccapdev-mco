@@ -81,13 +81,7 @@
             <!-- Content -->
             <template #content>
                 <template v-for="i in 10">
-                    <ApartmentCardSmall 
-                    :ratingData="{rating: 4, reviewCount: (i)* 6}"
-                    class="flex shrink-0 snap-start">
-                        <template #header>
-                            Apartment {{ i }}
-                        </template>
-                    </ApartmentCardSmall>
+                    <OverallRating :ratings="ratings"/>
                 </template>
             </template>
         </Carousel>
