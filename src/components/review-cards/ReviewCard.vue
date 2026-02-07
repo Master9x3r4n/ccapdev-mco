@@ -1,8 +1,8 @@
 <script setup>
 const props = defineProps({
-    hasReply: {
-        type: Boolean,
-        default: false
+    ownerReply: {
+        type: String,
+        default: ''
     }
 })
 
@@ -34,19 +34,21 @@ const props = defineProps({
 
         <!-- Title Container -->
         <div class="w-full h-[14%] flex items-center font-bold leading-8 text-2xl">
-            Title of Review
+            <slot name = "review-title">Title of Review</slot>
         </div>
 
         <!-- Comment Container -->
         <div class="h-[56%] flex flex-col">
             <!-- Review Container -->
             <div class="w-full text-[16px] leading-6 grow">
-                I have stayed at this apartment for a while, and let me say, it is as the name says. 
-                It's a really cool apartment and it has a lot of the amenities 
-                that a student would want from...
+                <slot name="review">
+                    I have stayed at this apartment for a while, and let me say, it is as the name says. 
+                    It's a really cool apartment and it has a lot of the amenities 
+                    that a student would want from...
+                </slot>
             </div>
 
-            <template v-if="props.hasReply">
+            <template v-if="props.ownerReply">
                 <!-- Reply Container -->
                 <div class="w-full h-[50%] mt-3">
                     <div class="bg-[#D9D9D9] h-full rounded-3xl 
@@ -55,7 +57,9 @@ const props = defineProps({
                             Reply from the owner
                         </div>
                         <div class="w-full text-[16px] leading-6">
-                            Glad to hear that you were satisfied with our space! ^_^
+                            <slot name="author-reply">
+                                Glad to hear that you were satisfied with our space! ^_^
+                            </slot>
                         </div>
                     </div>
                 </div>
@@ -71,7 +75,7 @@ const props = defineProps({
 
             <!-- Upvote -->
             <div class="italic font-normal text-[16px] leading-6 flex">
-                👍 -67 👎
+                👍 -69 👎
             </div>
         </div>
 
