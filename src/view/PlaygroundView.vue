@@ -54,7 +54,8 @@ import ReviewCard from '@/components/review-cards/ReviewCard.vue';
     <!-- Review Card Small -->
     <TestContainer dir="col">
         <TestLabel>Review Cards</TestLabel>
-        <div class="flex justify-around">
+        <div class="flex justify-evenly gap-20">
+            <ReviewCard hasReply="true"/>
             <ReviewCard />
         </div>
     </TestContainer>
