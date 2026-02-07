@@ -33,28 +33,25 @@ const getImageUrl = (index) => {
 </script>
 
 <template>
-    <!-- Lower Review Container -->
-    <div class="h-[50%] flex justify-end items-end">
-        <!-- Flex-end container -->
-        <div class="w-[85%] h-[50%] flex">
-            <!-- Review Information -->
-            <div class="flex flex-col h-full shrink-0 text-right justify-center p-1">
-                <h1 class="font-normal text-[20px] leading-5">
-                    {{ parseRating() }}
-                </h1>
-                <p class="italic font-normal text-[12px] leading-4">
-                    From {{ reviewCount }} reviews
-                </p>
-            </div>
+    <!-- Flex-end container -->
+    <div class="w-[85%] h-[50%] flex">
+        <!-- Review Information -->
+        <div class="flex flex-col h-full shrink-0 text-right justify-center p-1">
+            <h1 class="font-normal text-[20px] leading-5">
+                {{ parseRating() }}
+            </h1>
+            <p class="italic font-normal text-[12px] leading-4">
+                From {{ reviewCount }} reviews
+            </p>
+        </div>
 
-            <!-- Review Stars -->
-            <div class="flex h-full grow-4 justify-evenly items-center pt-auto pb-auto">
-                <template v-for="j in 3">
-                    <template v-for="i in getstarCounts()[j-1]">
-                        <img :src="getImageUrl(j-1)" width="36px">
-                    </template>
+        <!-- Review Stars -->
+        <div class="flex h-full grow-4 justify-evenly items-center pt-auto pb-auto">
+            <template v-for="j in 3">
+                <template v-for="i in getstarCounts()[j-1]">
+                    <img :src="getImageUrl(j-1)" width="36px">
                 </template>
-            </div>
+            </template>
         </div>
     </div>
 </template>

@@ -13,20 +13,21 @@ const props = defineProps({
 </script>
 
 <template>
+    <!-- 3x W 0.8x H -->
     <div class=
-    "h-104.75 w-110 rounded-[25px] 
+    "h-84 w-310 rounded-[25px] 
     p-0 shadow-2xl relative
-    bg-white flex flex-col items-center">
+    bg-white flex flex-row items-center">
         <!-- Photo h-40%-->
         <div class=
-        "w-full h-5/12 rounded-t-[25px] 
-        absolute left-0 right-0 top-0
+        "h-full w-5/12 rounded-l-[25px] 
+        absolute left-0 bottom-0 top-0
         bg-gradient"></div>
 
         <!-- Frame -->
-       <div class=" absolute top-[45%] w-[90%] h-[50%]">
+       <div class=" absolute right-8 w-[36%] h-[90%]">
             <!-- Upper Container -->
-            <div class="h-[50%] flex flex-col justify-between">
+            <div class="h-[75%] flex flex-col justify-end text-right gap-6">
                 <!-- Apartment Name -->
                 <div>
                     <h1 class="font-bold text-[32px] leading-10">
@@ -37,17 +38,20 @@ const props = defineProps({
                 </div>
 
                 <!-- Apartment Description -->
-                <div>
+                <div class="h-[60%]">
                     <p class="italic font-normal text-[20px] leading-6">
                         <slot name="description">
-                            This apartment is very nice. It has very nice rooms and is placed very nicely.
+                            This apartment is very nice. It has 
+                            nice rooms and is placed very nicely.
+                            It also has nice neighbors and a lot
+                            of other nice things.
                         </slot>
                     </p>
                 </div>
             </div>
 
             <!-- Lower Review Container -->
-            <div class="h-[50%] flex justify-end items-end">
+            <div class="h-[25%] flex justify-end items-center">
                 <CardRating 
                 :rating="ratingData['rating']" 
                 :reviewCount="ratingData['reviewCount']"/>
