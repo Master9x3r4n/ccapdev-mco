@@ -7,6 +7,7 @@
     import TestLabel from '@/components/test-components/TestLabel.vue';
     import OverallRating from '@/components/side-cards/OverallRating.vue';
     import ReviewCard from '@/components/review-cards/ReviewCard.vue';
+    import SearchBar from "@/components/header/SearchBar.vue";
 
     const items= [1, 2, 3, 4, 5]
 
@@ -108,6 +109,11 @@
         <TestLabel>Full Review (STATIC)</TestLabel>
         
     </TestContainer>
-
     <!-- Filter Buttons -->
+
+    <!-- Search Bar -->
+  <TestContainer dir="col">
+    <TestLabel>Search Bar</TestLabel>
+    <SearchBar></SearchBar>
+  </TestContainer>
 </template>
