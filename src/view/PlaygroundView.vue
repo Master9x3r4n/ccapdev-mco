@@ -8,6 +8,7 @@
     import OverallRating from '@/components/side-cards/OverallRating.vue';
     import ReviewCard from '@/components/review-cards/ReviewCard.vue';
     import SearchBar from "@/components/header/SearchBar.vue";
+    import MediaContainer from '@/components/carousel/MediaContainer.vue';
 
     const items= [1, 2, 3, 4, 5]
 
@@ -83,6 +84,20 @@
             <template #content>
                 <template v-for="i in 10">
                     <OverallRating :ratings="ratings"/>
+                </template>
+            </template>
+        </Carousel>
+    </TestContainer>
+
+    <!-- Image/Video Carousel -->
+    <TestContainer dir="col">
+        <TestLabel>Media Carousel</TestLabel>
+        <Carousel :count="1">
+            <!-- Content -->
+            <template #content>
+                <template v-for="i in 3">
+                    <MediaContainer />
+                    <MediaContainer src="src/assets/test-assets/test-media.jpeg" />
                 </template>
             </template>
         </Carousel>
