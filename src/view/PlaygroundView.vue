@@ -79,11 +79,11 @@
     <!-- Long Carousel -->
     <TestContainer dir="col">
         <TestLabel>Carousel Length Test</TestLabel>
-        <Carousel :count="3" styling="small circular" :buttonSpacing="2">
+        <Carousel :count="1" styling="small circular" :buttonSpacing="2">
             <!-- Content -->
             <template #content>
                 <template v-for="i in 10">
-                    <OverallRating :ratings="ratings"/>
+                    <OverallRating :ratings="ratings" class="flex shrink-0 snap-start"/>
                 </template>
             </template>
         </Carousel>
@@ -96,8 +96,8 @@
             <!-- Content -->
             <template #content>
                 <template v-for="i in 3">
-                    <MediaContainer />
-                    <MediaContainer src="src/assets/test-assets/test-media.jpeg" />
+                    <MediaContainer class="flex shrink-0 snap-start"/>
+                    <MediaContainer src="src/assets/test-assets/test-media.jpeg" class="flex shrink-0 snap-start"/>
                 </template>
             </template>
         </Carousel>
