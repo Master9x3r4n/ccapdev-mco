@@ -2,7 +2,7 @@
     import ApartmentCardSmall from '@/components/apartment-cards/ApartmentCardSmall.vue';
     import ApartmentCardLarge from '@/components/apartment-cards/ApartmentCardLarge.vue';
     import Carousel from '@/components/carousel/Carousel.vue';
-    import DarkModeButton from '@/components/DarkModeButton.vue';
+    import DarkModeButton from '@/components/darkmode/DarkModeButton.vue';
     import TestContainer from '@/components/test-components/TestContainer.vue';
     import TestLabel from '@/components/test-components/TestLabel.vue';
     import OverallRating from '@/components/side-cards/OverallRating.vue';
