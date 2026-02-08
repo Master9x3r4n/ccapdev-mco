@@ -8,6 +8,10 @@ const props = defineProps({
     alt: {
         type: String,
         default: "media"
+    },
+    size: {
+        type: String,
+        default: "large"
     }
 })
 
@@ -15,8 +19,8 @@ const props = defineProps({
 
 <!-- 740 x 430 -->
 <template>
-        <div class="w-185 h-107.5 flex justify-center items-center rounded-3xl"
-        :class="!props.src? 'bg-gradient': ''">
+        <div class="flex justify-center items-center rounded-3xl"
+        :class="[!props.src? 'bg-gradient': '', props.size]">
             <img v-if="props.src" :src="props.src" width="740px" :alt="props.alt"
             class="rounded-3xl">
         </div>
@@ -25,8 +29,22 @@ const props = defineProps({
 
 
 <style scoped>
+@reference "tailwindcss";
+
 .bg-gradient {
     background: linear-gradient(97.79deg, #355AFF -0.78%, #2C0ED6 100%);
+}
+
+.large {
+    @apply w-185 h-107.5
+}
+
+.medium {
+    @apply size-67
+}
+
+.small {
+    @apply size-24
 }
 
 </style>
