@@ -48,6 +48,9 @@
     <!-- Search Bar -->
     <TestContainer dir="col">
         <TestLabel>Search Bar</TestLabel>
+      <div class="bg-[#2C0ED6]">
+        <SearchBar type="alt"></SearchBar>
+      </div>
         <SearchBar></SearchBar>
     </TestContainer>
 
