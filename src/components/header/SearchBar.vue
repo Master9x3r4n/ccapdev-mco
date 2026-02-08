@@ -15,13 +15,13 @@ inputRef.value = undefined;
 // Style Configuration
 const styles = {
   default: {
-    container: "w-155 h-9 bg-[#EAEAEA] pr-1",
+    container: "max-w-[620px] h-9 bg-[#EAEAEA] pr-1",
     input: "text-sm bg-[#EAEAEA]",
     searchBtn: "bg-[#355AFF] hover:bg-[#2C0ED6] text-white h-full px-2",
     clearBtn: "p-1 hover:bg-[#BFBFBF] text-gray-500",
   },
   alt: {
-    container: "w-[591px] h-[54px] bg-[#FFFFFF] pr-1",
+    container: "max-w-[591px] h-[54px] bg-[#FFFFFF] pr-1",
     input: "text-lg bg-[#FFFFFF]",
     searchBtn: "bg-[#355AFF] hover:bg-[#2C0ED6] text-white p-2 rounded-full mr-1",
     clearBtn: "p-2 hover:bg-[#BFBFBF] text-gray-500",
@@ -44,7 +44,7 @@ const clearSearch = () => {
     <div
         :class="[
         theme.container,
-        'flex items-center overflow-hidden border border-gray-300 rounded-full focus-within:ring-2 focus-within:ring-[#355AFF] focus-within:border-transparent transition-all shadow-sm'
+        'w-full flex items-center overflow-hidden border-gray-300 rounded-full focus-within:ring-2 focus-within:ring-[#355AFF] focus-within:border-transparent transition-all shadow-sm'
       ]"
     >
       <button

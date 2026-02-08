@@ -12,6 +12,7 @@
     import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
     import FilterButton from '@/components/filter-button/FilterButton.vue';
     import FooterComponent from '@/components/footer/FooterComponent.vue';
+    import PageHeader from "@/components/header/PageHeader.vue";
 
     import {ref} from 'vue'
 
@@ -40,6 +41,7 @@
 </script>
 
 <template>
+    <PageHeader></PageHeader>
     <!-- Dark Mode Button -->
     <TestContainer dir="row">
         <TestLabel>Theme</TestLabel>
@@ -49,7 +51,7 @@
     <!-- Search Bar -->
     <TestContainer dir="col">
         <TestLabel>Search Bar</TestLabel>
-      <div class="bg-[#2C0ED6]">
+      <div class="bg-[#2C0ED6] w-full">
         <SearchBar type="alt"></SearchBar>
       </div>
         <SearchBar></SearchBar>
