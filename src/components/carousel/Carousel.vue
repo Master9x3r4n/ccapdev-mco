@@ -11,7 +11,7 @@ const props = defineProps({
         type: Number,
         default: 6
     },
-    styling: {
+    buttonStyling: {
         type: String,
         default: "small circular"
     }
@@ -65,14 +65,17 @@ onMounted(() => {
     <!--  -->
         <div ref = "carouselContent"
         class = "overflow-x-auto overflow-y-hidden scroll-smooth hide-scrollbar w-full flex snap-x snap-mandatory">
-            <slot name="content"></slot>
+            <div class="flex">
+                <slot name="content"></slot>
+            </div>
+
         </div>
 
         <!-- Left button -->
         <CarouselScrollButton 
         direction="left" 
         :spacing="props.buttonSpacing"
-        :adjust="props.styling"
+        :adjust="props.buttonStyling"
         @click="scroll('left')">
             <
         </CarouselScrollButton>
@@ -81,7 +84,7 @@ onMounted(() => {
         <CarouselScrollButton 
         direction="right" 
         :spacing="props.buttonSpacing"
-        :adjust="props.styling"
+        :adjust="props.buttonStyling"
         @click="scroll('right')">
             >
         </CarouselScrollButton>
