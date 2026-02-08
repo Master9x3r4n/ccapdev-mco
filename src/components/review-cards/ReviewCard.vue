@@ -12,7 +12,7 @@ const props = defineProps({
 
 <template>
     <div class="flex flex-col justify-center items-center 
-    p-10 gap-3.75 w-105.25 h-120 border-3 rounded-3xl
+    p-10 gap-3.75 w-105.25 h-120.25 border-3 rounded-3xl
     border-[#BFBFBF] bg-white">
         <!-- Header Container -->
         <div class="w-full flex justify-between items-center">
