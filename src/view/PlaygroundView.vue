@@ -167,6 +167,4 @@
         <FullReviewCard/> 
         </div>
     </TestContainer>
-
-    <FooterComponent/>
 </template>
