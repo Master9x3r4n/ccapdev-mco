@@ -11,6 +11,7 @@
     import MediaContainer from '@/components/carousel/MediaContainer.vue';
     import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
     import FilterButton from '@/components/filter-button/FilterButton.vue';
+    import FooterComponent from '@/components/footer/FooterComponent.vue';
 
     import {ref} from 'vue'
 
@@ -163,4 +164,6 @@
         <FullReviewCard/> 
         </div>
     </TestContainer>
+
+    <FooterComponent/>
 </template>
