@@ -62,13 +62,13 @@ onMounted(() => {
     <div 
     class = "relative flex justify-center items-center"
     :style="{ width: containerWidth }"> 
-    <!--  -->
+        <!-- Carousel Content -->
         <div ref = "carouselContent"
         class = "overflow-x-auto overflow-y-hidden scroll-smooth hide-scrollbar w-full flex snap-x snap-mandatory">
+            <!-- Items Container (idk it breaks without this one) -->
             <div class="flex">
                 <slot name="content"></slot>
             </div>
-
         </div>
 
         <!-- Left button -->
