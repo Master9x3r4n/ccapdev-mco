@@ -39,6 +39,12 @@
         <DarkModeButton />
     </TestContainer>
 
+    <!-- Search Bar -->
+    <TestContainer dir="col">
+        <TestLabel>Search Bar</TestLabel>
+        <SearchBar></SearchBar>
+    </TestContainer>
+
     <!-- Small Card -->
     <TestContainer dir="col">
         <TestLabel>Small Card</TestLabel>
@@ -117,17 +123,11 @@
             <ReviewCard />
         </div>
     </TestContainer>
-    
+
     <!-- Review Card Large -->
     <TestContainer dir="col">
         <TestLabel>Full Review (STATIC)</TestLabel>
         
     </TestContainer>
     <!-- Filter Buttons -->
-
-    <!-- Search Bar -->
-  <TestContainer dir="col">
-    <TestLabel>Search Bar</TestLabel>
-    <SearchBar></SearchBar>
-  </TestContainer>
 </template>
