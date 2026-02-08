@@ -6,6 +6,14 @@ const props = defineProps({
     count: {
         type: Number,
         default: 1
+    },
+    buttonSpacing: {
+        type: Number,
+        default: 6
+    },
+    styling: {
+        type: String,
+        default: "small circular"
     }
 });
 
@@ -57,16 +65,31 @@ onMounted(() => {
     <!--  -->
         <div ref = "carouselContent"
         class = "overflow-x-auto overflow-y-hidden scroll-smooth hide-scrollbar w-full flex snap-x snap-mandatory">
-            <div v-for="(item, index) in $slots.content?.()" :key="index" class="flex shrink-0 snap-start">
+            <div 
+            v-for="(item, index) in $slots.content?.()" 
+            :key="index" 
+            class="flex shrink-none snap-start">
                 <component :is="item" />
             </div>
         </div>
 
         <!-- Left button -->
-        <CarouselScrollButton direction="left" @click="scroll('left')"><</CarouselScrollButton>
+        <CarouselScrollButton 
+        direction="left" 
+        :spacing="props.buttonSpacing"
+        :adjust="props.styling"
+        @click="scroll('left')">
+            <
+        </CarouselScrollButton>
 
         <!-- Right Button -->
-        <CarouselScrollButton direction="right" @click="scroll('right')">></CarouselScrollButton>
+        <CarouselScrollButton 
+        direction="right" 
+        :spacing="props.buttonSpacing"
+        :adjust="props.styling"
+        @click="scroll('right')">
+            >
+        </CarouselScrollButton>
     </div>
 </template>
 

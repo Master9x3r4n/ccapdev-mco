@@ -60,7 +60,7 @@
     <!-- Carousel -->
     <TestContainer dir="col">
         <TestLabel>Carousel</TestLabel>
-        <Carousel :count="1">
+        <Carousel :count="1"  styling="small circular" :buttonSpacing="1">
             <!-- Content -->
             <template #content>
                 <template v-for="i in items">
@@ -79,7 +79,7 @@
     <!-- Long Carousel -->
     <TestContainer dir="col">
         <TestLabel>Carousel Length Test</TestLabel>
-        <Carousel :count="3">
+        <Carousel :count="3" styling="small circular" :buttonSpacing="2">
             <!-- Content -->
             <template #content>
                 <template v-for="i in 10">
@@ -92,7 +92,7 @@
     <!-- Image/Video Carousel -->
     <TestContainer dir="col">
         <TestLabel>Media Carousel</TestLabel>
-        <Carousel :count="1">
+        <Carousel :count="1" styling="large">
             <!-- Content -->
             <template #content>
                 <template v-for="i in 3">
