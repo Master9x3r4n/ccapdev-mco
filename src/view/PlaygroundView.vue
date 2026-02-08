@@ -9,10 +9,10 @@
     import ReviewCard from '@/components/review-cards/ReviewCard.vue';
     import SearchBar from "@/components/header/SearchBar.vue";
     import MediaContainer from '@/components/carousel/MediaContainer.vue';
-import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
-import FilterButton from '@/components/filter-button/FilterButton.vue';
+    import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
+    import FilterButton from '@/components/filter-button/FilterButton.vue';
 
-    import {ref, computed} from 'vue'
+    import {ref} from 'vue'
 
     const items= [1, 2, 3, 4, 5]
 
