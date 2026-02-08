@@ -9,6 +9,7 @@
     import ReviewCard from '@/components/review-cards/ReviewCard.vue';
     import SearchBar from "@/components/header/SearchBar.vue";
     import MediaContainer from '@/components/carousel/MediaContainer.vue';
+import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
 
     const items= [1, 2, 3, 4, 5]
 
@@ -121,15 +122,26 @@
     <TestContainer dir="col">
         <TestLabel>Review Cards</TestLabel>
         <div class="flex justify-evenly gap-20">
-            <ReviewCard ownerReply="."/>
+            <ReviewCard>
+                <template #ownerReply>
+                    Glad to hear that you were satisfied with our space! ^_^
+                </template>
+            </ReviewCard>
             <ReviewCard />
         </div>
     </TestContainer>
 
     <!-- Review Card Large -->
     <TestContainer dir="col">
-        <TestLabel>Full Review (STATIC)</TestLabel>
-        
+        <TestLabel>Full Review Card</TestLabel>
+        <div class="flex flex-col justify-evenly gap-2">
+        <FullReviewCard> 
+            <template #ownerReply>
+                Glad to hear that you were satisfied with our space! ^_^
+            </template>
+        </FullReviewCard>
+        <FullReviewCard/> 
+        </div>
     </TestContainer>
     <!-- Filter Buttons -->
 </template>
