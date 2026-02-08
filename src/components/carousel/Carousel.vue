@@ -72,22 +72,16 @@ onMounted(() => {
         </div>
 
         <!-- Left button -->
-        <CarouselScrollButton 
-        direction="left" 
+        <CarouselScrollButton direction="left" 
         :spacing="props.buttonSpacing"
         :adjust="props.buttonStyling"
-        @click="scroll('left')">
-            <
-        </CarouselScrollButton>
+        @click="scroll('left')"/>
 
         <!-- Right Button -->
-        <CarouselScrollButton 
-        direction="right" 
+        <CarouselScrollButton direction="right" 
         :spacing="props.buttonSpacing"
         :adjust="props.buttonStyling"
-        @click="scroll('right')">
-            >
-        </CarouselScrollButton>
+        @click="scroll('right')" />
     </div>
 </template>
 
