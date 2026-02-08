@@ -66,7 +66,21 @@
     <!-- Carousel -->
     <TestContainer dir="col">
         <TestLabel>Carousel</TestLabel>
-        <Carousel :count="1"  buttonStyling="small circular" :buttonSpacing="1">
+        <Carousel buttonStyling="small circular" :buttonSpacing="2">
+            <!-- Content -->
+            <template #content>
+                <template v-for="i in 5">
+                    <OverallRating :ratings="ratings" 
+                    class="flex shrink-0 snap-start"/>
+                </template>
+            </template>
+        </Carousel>
+    </TestContainer>
+
+    <!-- Long Carousel -->
+    <TestContainer dir="col">
+        <TestLabel>Carousel Length Test</TestLabel>
+        <Carousel :count="2"  buttonStyling="small circular" :buttonSpacing="1">
             <!-- Content -->
             <template #content>
                 <template v-for="i in items">
@@ -76,20 +90,6 @@
                             Apartment {{ i }}
                         </template>
                     </ApartmentCardSmall>
-                </template>
-            </template>
-        </Carousel>
-    </TestContainer>
-
-    <!-- Long Carousel -->
-    <TestContainer dir="col">
-        <TestLabel>Carousel Length Test</TestLabel>
-        <Carousel :count="3" buttonStyling="small circular" :buttonSpacing="2">
-            <!-- Content -->
-            <template #content>
-                <template v-for="i in 10">
-                    <OverallRating :ratings="ratings" 
-                    class="flex shrink-0 snap-start"/>
                 </template>
             </template>
         </Carousel>
