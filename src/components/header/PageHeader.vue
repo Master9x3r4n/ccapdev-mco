@@ -6,7 +6,7 @@ import Dropdown from "@/components/header/Dropdown.vue";
 
 const props = defineProps({
   search: {
-    type: String,
+    type: Boolean,
     default: true,
   },
   profileImg: {
@@ -23,7 +23,9 @@ const props = defineProps({
 <template>
   <header class="sticky top-0 z-50 flex h-[76px] w-full items-center bg-white px-4 py-3 shadow-md justify-between">
     <Logo />
-    <SearchBar v-if="props.search" />
+    <div :class="[{'invisible': !props.search}, 'w-full']">
+      <SearchBar />
+    </div>
     <Dropdown>
       <template #trigger>
         <button class="rounded-full transition-all duration-200 hover:scale-105 hover:bg-accent">
