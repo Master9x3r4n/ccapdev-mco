@@ -4,10 +4,16 @@
 
 <template>
   <div class="p-8 w-full mx-auto flex justify-center">
-    <div class="flex items-center w-155 h-9 overflow-hidden border border-gray-300 rounded-full focus-within:ring-2 focus-within:ring-[#355AFF] focus-within:border-transparent transition-all shadow-sm">
-
+    <div class="
+    flex items-center w-155 h-9 overflow-hidden
+    border border-gray-300 rounded-full focus-within:ring-2
+    focus-within:ring-[#355AFF] focus-within:border-transparent
+    transition-all shadow-sm"
+    >
       <button
-          class="bg-[#355AFF] hover:bg-[#2C0ED6] text-white h-full px-2 flex items-center justify-center transition-colors"
+          class="
+          bg-[#355AFF] hover:bg-[#2C0ED6] text-white h-full px-2
+          flex items-center justify-center transition-colors"
           aria-label="Search"
       >
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
