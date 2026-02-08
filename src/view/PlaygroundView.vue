@@ -12,6 +12,8 @@
 import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
 import FilterButton from '@/components/filter-button/FilterButton.vue';
 
+    import {ref, computed} from 'vue'
+
     const items= [1, 2, 3, 4, 5]
 
     const ratings = [
@@ -32,6 +34,8 @@ import FilterButton from '@/components/filter-button/FilterButton.vue';
             rating: 5
         }
     ]
+
+    const selectedItems = ref([])
 </script>
 
 <template>
@@ -51,7 +55,14 @@ import FilterButton from '@/components/filter-button/FilterButton.vue';
     <TestContainer dir="col">
         <TestLabel>Filter Buttons</TestLabel>
         <div class="flex w-full gap-2 mt-4 justify-center">
-            <FilterButton/>
+            <template v-for="i in 5">
+                <FilterButton v-model="selectedItems" :value="`Really Cool University ${i}`">
+                    Really Cool University {{ i }}
+                </FilterButton>
+            </template>
+        </div>
+        <div class="flex w-full gap-2 mt-4 justify-center">
+            <p>{{ selectedItems }}</p>
         </div>
     </TestContainer>
 
