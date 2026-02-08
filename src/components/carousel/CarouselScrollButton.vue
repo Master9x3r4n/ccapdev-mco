@@ -17,24 +17,26 @@
 
 <template>
     <button 
-    class="border-none rounded-[50%] flex justify-center items-center top-6/12
-    font-bold p-0 absolute
+    class="border-none rounded-[50%] flex justify-center items-center top-6/12 w-full
+    font-bold p-0 absolute text-center
     text-white text-shadow-lg"
     :style="{ [direction === 'left' ? 'left' : 'right']: `${spacing * 0.25}rem` }"
     :class="props.adjust">
-        <slot></slot>
+        <div class="h-full w-full flex text-center items-center justify-center absolute bottom-0.5">
+            <slot></slot>
+        </div>
     </button>
 </template>
 
 <style scoped>
-@import "tailwindcss";
+@reference "tailwindcss";
 
 .circular {
     @apply bg-blue-500;
 }
 
 .small {
-    @apply size-8 text-2xl;
+    @apply size-7 text-2xl;
 }
 
 .large {
