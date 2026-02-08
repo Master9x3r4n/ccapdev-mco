@@ -10,6 +10,7 @@
     import SearchBar from "@/components/header/SearchBar.vue";
     import MediaContainer from '@/components/carousel/MediaContainer.vue';
 import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
+import FilterButton from '@/components/filter-button/FilterButton.vue';
 
     const items= [1, 2, 3, 4, 5]
 
@@ -44,6 +45,14 @@ import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
     <TestContainer dir="col">
         <TestLabel>Search Bar</TestLabel>
         <SearchBar></SearchBar>
+    </TestContainer>
+
+    <!-- Filter Buttons -->
+    <TestContainer dir="col">
+        <TestLabel>Filter Buttons</TestLabel>
+        <div class="flex w-full gap-2 mt-4 justify-center">
+            <FilterButton/>
+        </div>
     </TestContainer>
 
     <!-- Small Card -->
@@ -143,5 +152,4 @@ import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
         <FullReviewCard/> 
         </div>
     </TestContainer>
-    <!-- Filter Buttons -->
 </template>
