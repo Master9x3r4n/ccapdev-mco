@@ -1,13 +1,6 @@
 <script setup>
 import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
 
-const props = defineProps({
-    ownerReply: {
-        type: String,
-        default: ''
-    }
-})
-
 </script>
 
 <template>
@@ -50,7 +43,8 @@ const props = defineProps({
                 </slot>
             </div>
 
-            <template v-if="props.ownerReply">
+            <!-- CHANGE THIS TO CONDITIONAL SLOTTING -->
+            <template v-if="$slots.ownerReply">
                 <!-- Reply Container -->
                 <div class="w-full h-[50%] mt-3">
                     <div class="bg-[#D9D9D9] h-full rounded-3xl 
@@ -59,9 +53,7 @@ const props = defineProps({
                             Reply from the owner
                         </div>
                         <div class="w-full text-[16px] leading-6">
-                            <slot name="author-reply">
-                                Glad to hear that you were satisfied with our space! ^_^
-                            </slot>
+                            <slot name="ownerReply"></slot>
                         </div>
                     </div>
                 </div>
