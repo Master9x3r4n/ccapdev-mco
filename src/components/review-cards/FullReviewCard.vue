@@ -47,7 +47,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
 
             <!-- Carousel Container -->
             <div class="mt-3 h-[47%] flex w-full justify-center items-center">
-                <Carousel :count="4" buttonStyling="large" buttonSpacing="4">
+                <Carousel :count="4" buttonStyling="large" :buttonSpacing="4">
                 <template #content>
                     <template v-for="i in 10">
                         <div class="flex shrink-0 snap-start pl-2 pr-2">
