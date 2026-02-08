@@ -65,12 +65,7 @@ onMounted(() => {
     <!--  -->
         <div ref = "carouselContent"
         class = "overflow-x-auto overflow-y-hidden scroll-smooth hide-scrollbar w-full flex snap-x snap-mandatory">
-            <div 
-            v-for="(item, index) in $slots.content?.()" 
-            :key="index" 
-            class="flex shrink-none snap-start">
-                <component :is="item" />
-            </div>
+            <slot name="content"></slot>
         </div>
 
         <!-- Left button -->

@@ -64,9 +64,8 @@
             <!-- Content -->
             <template #content>
                 <template v-for="i in items">
-                    <ApartmentCardSmall 
-                    :ratingData="{rating: 5 - i + 0.5, reviewCount: (i)* 6}"
-                    class="flex shrink-0 snap-start">
+                    <ApartmentCardSmall class="flex shrink-0 snap-start"
+                    :ratingData="{rating: 5 - i + 0.5, reviewCount: (i)* 6}">
                         <template #header>
                             Apartment {{ i }}
                         </template>
@@ -79,7 +78,7 @@
     <!-- Long Carousel -->
     <TestContainer dir="col">
         <TestLabel>Carousel Length Test</TestLabel>
-        <Carousel :count="1" styling="small circular" :buttonSpacing="2">
+        <Carousel :count="3" styling="small circular" :buttonSpacing="2">
             <!-- Content -->
             <template #content>
                 <template v-for="i in 10">
