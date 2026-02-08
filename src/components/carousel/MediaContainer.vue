@@ -40,7 +40,11 @@ const props = defineProps({
 }
 
 .medium {
-    @apply w-67 h-67
+    @apply size-67
+}
+
+.small {
+    @apply size-24
 }
 
 </style>
