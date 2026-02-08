@@ -1,6 +1,6 @@
 <script setup>
 import CarouselScrollButton from './CarouselScrollButton.vue';
-import {ref, onMounted, nextTick} from 'vue';
+import {ref, onMounted, onUnmounted, nextTick} from 'vue';
 
 const props = defineProps({
     count: {
@@ -19,6 +19,8 @@ const props = defineProps({
 
 const containerWidth = ref('420px');
 const carouselContent = ref();
+const scrollStart = ref(true)
+const scrollEnd = ref(false)
 
 const scroll = (direction) => {
     const carousel = carouselContent.value;
@@ -27,16 +29,33 @@ const scroll = (direction) => {
         if (actualItem) {
             const scrollValue = actualItem.offsetWidth * props.count;
 
+            // Source btw: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
             carousel.scrollBy({
                 left: direction === 'left' ? -scrollValue : scrollValue,
                 behavior: 'smooth'
             });
         }
-
-        // Source btw: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
-
     }
 };
+
+const updateScroll = () => {
+    const carousel = carouselContent.value;
+    if (carousel) {
+        const actualItem = carousel.firstElementChild?.firstElementChild;
+        if (actualItem) {
+            // Get the current carousel index
+            const currentIndex = Math.round(carousel.scrollLeft / actualItem.offsetWidth);
+
+            // Compute the maximum index that can be reached
+            const totalItems = carousel.firstElementChild.children.length;
+            const maxIndex = totalItems - props.count;
+
+            // Update scroll refs
+            scrollStart.value = currentIndex <= 0;
+            scrollEnd.value = currentIndex >= maxIndex;   
+        }
+    }
+}
 
 // NOTE TO SELF: DOCUMENT THIS AS CLAUDE CODE (docuymentation here is based on non-ai research and self learning)
 onMounted(() => {
@@ -56,6 +75,16 @@ onMounted(() => {
     });
 });
 
+onMounted(() => {
+  carouselContent.value?.addEventListener('scroll', updateScroll, {
+    passive: true
+  })
+})
+
+onUnmounted(() => {
+  carouselContent.value?.removeEventListener('scroll', updateScroll)
+})
+
 </script>
 
 <template>
@@ -73,14 +102,14 @@ onMounted(() => {
 
         <!-- Left button -->
         <CarouselScrollButton direction="left" 
-        :spacing="props.buttonSpacing"
-        :adjust="props.buttonStyling"
+        v-if="!scrollStart"
+        :spacing="props.buttonSpacing" :adjust="props.buttonStyling"
         @click="scroll('left')"/>
 
         <!-- Right Button -->
         <CarouselScrollButton direction="right" 
-        :spacing="props.buttonSpacing"
-        :adjust="props.buttonStyling"
+        v-if="!scrollEnd"
+        :spacing="props.buttonSpacing" :adjust="props.buttonStyling"
         @click="scroll('right')" />
     </div>
 </template>
