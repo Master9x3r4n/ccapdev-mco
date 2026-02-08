@@ -1,61 +1,120 @@
 <script setup>
-import ApartmentCardSmall from '../apartment-cards/ApartmentCardSmall.vue';
-import CarouselContent from './CarouselContent.vue';
 import CarouselScrollButton from './CarouselScrollButton.vue';
-import {ref} from 'vue';
+import {ref, onMounted, onUnmounted, nextTick} from 'vue';
 
-const props = defineProps(['items']);
-const items = ref(props.items);
+const props = defineProps({
+    count: {
+        type: Number,
+        default: 1
+    },
+    buttonSpacing: {
+        type: Number,
+        default: 6
+    },
+    buttonStyling: {
+        type: String,
+        default: "small circular"
+    }
+});
+
+const containerWidth = ref('420px');
 const carouselContent = ref();
+const scrollStart = ref(true)
+const scrollEnd = ref(false)
 
 const scroll = (direction) => {
     const carousel = carouselContent.value;
-    if (carousel) {        
-        const scrollValue = carousel.clientWidth;
+    if (carousel) {
+        const actualItem = carousel.firstElementChild?.firstElementChild;
+        if (actualItem) {
+            const scrollValue = actualItem.offsetWidth * props.count;
 
-        console.log(carousel.scrollBy())
-
-        carousel.scrollBy({
-            left: direction == 'left' ? -scrollValue : scrollValue,
-            behavior: 'smooth'
-        })
-
-        // Source btw: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
+            // Source btw: https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollBy
+            carousel.scrollBy({
+                left: direction === 'left' ? -scrollValue : scrollValue,
+                behavior: 'smooth'
+            });
+        }
     }
 };
+
+const updateScroll = () => {
+    const carousel = carouselContent.value;
+    if (carousel) {
+        const actualItem = carousel.firstElementChild?.firstElementChild;
+        if (actualItem) {
+            // Get the current carousel index
+            const currentIndex = Math.round(carousel.scrollLeft / actualItem.offsetWidth);
+
+            // Compute the maximum index that can be reached
+            const totalItems = carousel.firstElementChild.children.length;
+            const maxIndex = totalItems - props.count;
+
+            // Update scroll refs
+            scrollStart.value = currentIndex <= 0;
+            scrollEnd.value = currentIndex >= maxIndex;   
+        }
+    }
+}
+
+// NOTE TO SELF: DOCUMENT THIS AS CLAUDE CODE (docuymentation here is based on non-ai research and self learning)
+onMounted(() => {
+    // Delay to wait for DOM to fully render first
+    nextTick(() => {
+        const carousel = carouselContent.value;
+
+        // Same logic accessing as scrolling
+        if (carousel) {
+            const actualItem = carousel.firstElementChild?.firstElementChild;
+
+            if (actualItem) {
+                const itemWidth = actualItem.offsetWidth;
+                containerWidth.value = `${itemWidth * (props.count)}px`; //Compute the new width
+            }
+        }
+    });
+});
+
+onMounted(() => {
+  carouselContent.value?.addEventListener('scroll', updateScroll, {
+    passive: true
+  })
+})
+
+onUnmounted(() => {
+  carouselContent.value?.removeEventListener('scroll', updateScroll)
+})
 
 </script>
 
 <template>
-    <!-- NEED TO MAKE THIS RELATIVE -->
-<div class = "relative max-w-4xl mx-auto flex justify-center items-center w-105">
-    <div ref = "carouselContent"
-    class = "overflow-x-auto overflow-y-hidden scroll-smooth hide-scrollbar w-full">
-        <CarouselContent>
-            <!-- Content -->
-            <template v-for="i in items" :key="i.id">
-                <ApartmentCardSmall 
-                :ratingData="{rating: 5 - i + 0.5, reviewCount: i * 6}"
-                class="flex shrink-0">
-                    <template #header>
-                        Apartment {{ i }}
-                    </template>
-                </ApartmentCardSmall>
-            </template>
-        </CarouselContent>
+    <div 
+    class = "relative flex justify-center items-center"
+    :style="{ width: containerWidth }"> 
+        <!-- Carousel Content -->
+        <div ref = "carouselContent"
+        class = "overflow-x-auto overflow-y-hidden scroll-smooth hide-scrollbar w-full flex snap-x snap-mandatory">
+            <!-- Items Container (idk it breaks without this one) -->
+            <div class="flex">
+                <slot name="content"></slot>
+            </div>
+        </div>
+
+        <!-- Left button -->
+        <CarouselScrollButton direction="left" 
+        v-if="!scrollStart"
+        :spacing="props.buttonSpacing" :adjust="props.buttonStyling"
+        @click="scroll('left')"/>
+
+        <!-- Right Button -->
+        <CarouselScrollButton direction="right" 
+        v-if="!scrollEnd"
+        :spacing="props.buttonSpacing" :adjust="props.buttonStyling"
+        @click="scroll('right')" />
     </div>
-
-    <!-- Left button -->
-    <CarouselScrollButton direction="left" @click="scroll('left')"><</CarouselScrollButton>
-
-    <!-- Right Button -->
-    <CarouselScrollButton direction="right" @click="scroll('right')">></CarouselScrollButton>
-</div>
 </template>
 
 <style scoped>
-@reference "@/assets/tailwind.css";
-
 /* hide scrollbar for webkit browsers */
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
@@ -67,9 +126,4 @@ const scroll = (direction) => {
     scrollbar-width: none;  
 }
 
-/* .card-container {
-    @apply p-2 border-4 rounded-2xl text-white shrink-0
-         bg-[#169cda] border-[#0f77a7]
-         dark:text-white dark:bg-[#0c2f8e] dark:border-[#0a2878] dark:font-bold;
-} */
 </style>

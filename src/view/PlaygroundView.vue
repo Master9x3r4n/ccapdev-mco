@@ -8,11 +8,9 @@
     import OverallRating from '@/components/side-cards/OverallRating.vue';
     import ReviewCard from '@/components/review-cards/ReviewCard.vue';
     import SearchBar from "@/components/header/SearchBar.vue";
+    import MediaContainer from '@/components/carousel/MediaContainer.vue';
 
-    import {ref} from 'vue'
-import ThumbsButton from '@/components/thumbs-buttons/ThumbsButton.vue';
-
-    const items=ref([1, 2, 3, 4, 5])
+    const items= [1, 2, 3, 4, 5]
 
     const ratings = [
         {
@@ -41,6 +39,12 @@ import ThumbsButton from '@/components/thumbs-buttons/ThumbsButton.vue';
         <DarkModeButton />
     </TestContainer>
 
+    <!-- Search Bar -->
+    <TestContainer dir="col">
+        <TestLabel>Search Bar</TestLabel>
+        <SearchBar></SearchBar>
+    </TestContainer>
+
     <!-- Small Card -->
     <TestContainer dir="col">
         <TestLabel>Small Card</TestLabel>
@@ -58,11 +62,52 @@ import ThumbsButton from '@/components/thumbs-buttons/ThumbsButton.vue';
             </ApartmentCardLarge>
         </template>
     </TestContainer>
-
+    
     <!-- Carousel -->
     <TestContainer dir="col">
         <TestLabel>Carousel</TestLabel>
-        <Carousel :items="items"/>
+        <Carousel buttonStyling="small circular" :buttonSpacing="2">
+            <!-- Content -->
+            <template #content>
+                <template v-for="i in 5">
+                    <OverallRating :ratings="ratings" 
+                    class="flex shrink-0 snap-start"/>
+                </template>
+            </template>
+        </Carousel>
+    </TestContainer>
+
+    <!-- Long Carousel -->
+    <TestContainer dir="col">
+        <TestLabel>Carousel Length Test</TestLabel>
+        <Carousel :count="2"  buttonStyling="small circular" :buttonSpacing="1">
+            <!-- Content -->
+            <template #content>
+                <template v-for="i in items">
+                    <ApartmentCardSmall class="flex shrink-0 snap-start"
+                    :ratingData="{rating: 5 - i + 0.5, reviewCount: (i)* 6}">
+                        <template #header>
+                            Apartment {{ i }}
+                        </template>
+                    </ApartmentCardSmall>
+                </template>
+            </template>
+        </Carousel>
+    </TestContainer>
+
+    <!-- Image/Video Carousel -->
+    <TestContainer dir="col">
+        <TestLabel>Media Carousel</TestLabel>
+        <Carousel :count="1" buttonStyling="large">
+            <!-- Content -->
+            <template #content>
+                <template v-for="i in 3">
+                    <MediaContainer class="flex shrink-0 snap-start"/>
+                    <MediaContainer src="src/assets/test-assets/test-media.jpeg" 
+                    class="flex shrink-0 snap-start"/>
+                </template>
+            </template>
+        </Carousel>
     </TestContainer>
 
     <!-- Overall Rating -->
@@ -80,17 +125,11 @@ import ThumbsButton from '@/components/thumbs-buttons/ThumbsButton.vue';
             <ReviewCard />
         </div>
     </TestContainer>
-    
+
     <!-- Review Card Large -->
     <TestContainer dir="col">
         <TestLabel>Full Review (STATIC)</TestLabel>
         
     </TestContainer>
     <!-- Filter Buttons -->
-
-    <!-- Search Bar -->
-  <TestContainer dir="col">
-    <TestLabel>Search Bar</TestLabel>
-    <SearchBar></SearchBar>
-  </TestContainer>
 </template>
