@@ -6,7 +6,7 @@
         },
         spacing: {
             type: Number,
-            default: 6
+            default: 5
         },
         adjust: {
             type: String,
@@ -22,9 +22,13 @@
     text-white text-shadow-lg"
     :style="{ [direction === 'left' ? 'left' : 'right']: `${spacing * 0.25}rem` }"
     :class="props.adjust">
-        <div class="h-full w-full flex text-center items-center justify-center absolute bottom-0.5">
-            <span v-if="direction === 'left'"><</span>
-            <span v-else>></span>
+        <div class="h-full w-full flex text-center items-center justify-center absolute">
+            <span v-if="direction === 'left'">
+                <img src="@/assets/carousel-assets/caret-left.svg" width="48px" alt="<">
+            </span>
+            <span v-else>
+                <img src="@/assets/carousel-assets/caret-right.svg" width="48px" alt=">">
+            </span>
         </div>
     </button>
 </template>
