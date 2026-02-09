@@ -73,7 +73,7 @@ const props = defineProps({
             </div>
 
             <!-- Reply Container -->
-            <div v-if="$slots.ownerReply" class="w-full h-[23%] mt-3 pl-2 pr-2">
+            <div v-if="$slots.ownerReply && $slots.ownerReply !== ''" class="w-full h-[23%] mt-3 pl-2 pr-2">
                 <div class="bg-[#D9D9D9] h-full rounded-3xl
                 flex flex-col justify-start items-center p-5.5 gap-1.25">
                     <div class="italic text-left w-full text-[14px] leading-6">

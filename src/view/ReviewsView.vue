@@ -11,7 +11,8 @@ const props = defineProps({
         {
             content:{
                 title: "Absolute Cinema",
-                description: "Never have I ever found an apartment that makes me go \"ABSOLUTE CINEMA\""
+                description: "Never have I ever found an apartment that makes me go \"ABSOLUTE CINEMA\"",
+                reply: "Glad to hear that you were satisfied with our space! ^_^",
             },
             rating: 5.0,
             score: 123,
@@ -23,7 +24,8 @@ const props = defineProps({
         {
             content:{
                 title: "Laughter is the Best Medicine",
-                description: "AHAHAHHHAHAHAHAHHAHAHAHAHAHHAHAHAHAHAHAHAHA"
+                description: "AHAHAHHHAHAHAHAHHAHAHAHAHAHHAHAHAHAHAHAHAHA",
+                reply: "",
             },
             rating: 3.5,
             score: 64,
@@ -35,7 +37,8 @@ const props = defineProps({
         {
             content:{
                 title: "Best for playing Gesnsh*t",
-                description: "Skibi toilet go kys (keep yourself safe)"
+                description: "Skibi toilet go kys (keep yourself safe)",
+                reply: "Lmao get rekt",
             },
             rating: 1.5,
             score: -69,
@@ -68,6 +71,7 @@ const props = defineProps({
                 <FullReviewCard :rating="i.rating" :reviewer="i.reviewerProfile">
                     <template #review-title>{{i.content.title}}</template>
                     <template #review-content>{{i.content.description}}</template>
+                    <template v-if="i.content.reply" #ownerReply>{{ i.content.reply }}</template>
                     <template #score>{{ i.score }}</template>
                 </FullReviewCard>
             </div>
