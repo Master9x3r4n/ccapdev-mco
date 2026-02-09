@@ -3,6 +3,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const isOpen = ref(false)
 const dropdownRef = ref(null)
+dropdownRef.value = undefined;
 
 // Toggle open/close
 const toggle = () => {
@@ -36,7 +37,6 @@ onUnmounted(() => {
 </script>
 <template>
   <div class="relative inline-block text-left" ref="dropdownRef">
-
     <div @click="toggle" class="cursor-pointer">
       <slot name="trigger"></slot>
     </div>
@@ -52,8 +52,8 @@ onUnmounted(() => {
       <div
           v-show="isOpen"
           class="absolute right-0 top-full z-50 mt-2
-                 w-[311px] h-[314px]
-                 flex flex-col justify-center items-center p-[40px] gap-[20px]
+                 w-77.5 h-78.5
+                 flex flex-col justify-center items-center p-10 gap-5
                  origin-top-right bg-white shadow-lg border border-gray-300 rounded-[40px] focus:outline-none"
       >
         <div class="py-1 w-full">
