@@ -6,8 +6,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
 
 <template>
     <div class="flex flex-col justify-center items-center 
-    p-2 pb-4 gap-4 w-105.25 h-fit border-b-3
-    border-b-[#BFBFBF] bg-white">
+    p-2 pb-4 gap-4.5 w-105.25 h-fit bg-white">
         <!-- Header Container -->
         <div class="w-full flex justify-between items-center">
             <div class="flex gap-3 items-center">
@@ -22,7 +21,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
             </div>
 
             <!-- Rating -->
-            <div class="flex justify-between items-center w-3/12">
+            <div class="flex justify-between items-center w-3/12 px-2">
                 <img src="@\assets\rating-assets\star-full.svg" width="28px">
                 <div class="font-bold text-3xl leading-10">4.0</div>
             </div>
@@ -72,7 +71,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
         </div>
 
         <!-- Footer Container -->
-        <div class="w-full h-[10%] flex justify-between items-center">
+        <div class="w-full h-[16%] flex justify-between items-center mt-1">
             <!-- Show More -->
             <div class="font-semibold underline text-[16px] leading-6">
                 Show More

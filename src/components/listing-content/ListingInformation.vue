@@ -1,5 +1,6 @@
 <script setup>
 import MediaContainer from '../carousel/MediaContainer.vue';
+import Divider from '../divider/Divider.vue';
 
 </script>
 
@@ -29,14 +30,14 @@ import MediaContainer from '../carousel/MediaContainer.vue';
 
     <!-- Listing Description -->
     <template v-if="$slots.description">
-        <div class="divider"></div>
+        <Divider/>
         <div class="leading-5 flex center italic w-full">
             <slot name="description"></slot>
         </div>
     </template>
 
     <!-- Amenities -->
-    <div class="divider"></div>
+    <Divider/>
     <div class="flex flex-col h-54 w-full">
         <div class="sub-heading">Amenities</div>
         <ul class="flex flex-col flex-wrap gap-4 h-[70%]">
@@ -47,14 +48,14 @@ import MediaContainer from '../carousel/MediaContainer.vue';
     </div>
 
     <!-- Location -->
-    <div class="divider"></div>
+    <Divider/>
     <div class="w-full">
         <div class="sub-heading">Location</div>
         <MediaContainer size="wide"/>
     </div>
 
     <!-- Contact -->
-    <div class="divider"></div>
+    <Divider/>
     <div class="w-full">
         <div class="sub-heading">Contact</div>
         <div>
@@ -73,10 +74,6 @@ import MediaContainer from '../carousel/MediaContainer.vue';
 
 .sub-heading {
     @apply font-semibold text-[24px] leading-8 mb-5
-}
-
-.divider {
-    @apply border-2 border-[#C5C5C5] w-full my-2
 }
 
 </style>
