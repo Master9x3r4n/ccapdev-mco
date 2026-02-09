@@ -10,7 +10,7 @@ import Divider from '@/components/divider/Divider.vue';
 </script>
 
 <template>
-    <div class="flex justify-between gap-4 m-8">
+    <div class="flex justify-around gap-8 m-8">
         <!-- Main Listing -->
         <div class="flex flex-col gap-4 w-fit">
             <!-- Media Carousel -->
