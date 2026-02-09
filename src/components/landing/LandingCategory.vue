@@ -1,7 +1,7 @@
 <script setup>
 import ApartmentCardSmall from '../apartment-cards/ApartmentCardSmall.vue';
 import Carousel from '../carousel/Carousel.vue';
-import FilterButton from '../filter-button/FilterButton.vue';
+import FilterButton from '../page-buttons/FilterButton.vue';
 
 import {ref} from 'vue'
 

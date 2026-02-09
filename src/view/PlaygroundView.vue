@@ -10,12 +10,12 @@
     import SearchBar from "@/components/header/SearchBar.vue";
     import MediaContainer from '@/components/carousel/MediaContainer.vue';
     import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
-    import FilterButton from '@/components/filter-button/FilterButton.vue';
+    import FilterButton from '@/components/page-buttons/FilterButton.vue';
     import ListingInformation from '@/components/listing-content/ListingInformation.vue';
     import DarkModeSlider from '@/components/darkmode/DarkModeSlider.vue';
+    import PageButtons from "@/components/page-buttons/PageButtons.vue";
 
     import {ref} from 'vue'
-    import PageButtons from "@/components/page-buttons/PageButtons.vue";
 
     const items= [1, 2, 3, 4, 5]
 
