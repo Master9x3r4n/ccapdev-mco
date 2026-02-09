@@ -3,7 +3,14 @@ import SearchBar from '@/components/header/SearchBar.vue';
 import LandingCategory from '@/components/landing/LandingCategory.vue';
 
 
+const universityFilters = [
+	"De La Salle University", "University of Santo Thomas",
+	"University of the Philippines - Diliman", "Ateneo De Manila University"
+]
 
+const homeTypes = [
+	"Studio", "1 bedroom", "2 bedrooms", "Dormitory"
+]
 
 </script>
 
@@ -37,10 +44,14 @@ import LandingCategory from '@/components/landing/LandingCategory.vue';
 	<!-- Main Section -->
 	<div class="w-full h-fit flex flex-col gap-10 justify-start px-12 pb-4">
 		<!-- First Category -->
-		<LandingCategory/>
+		<LandingCategory :filterItems="universityFilters"/>
 
 		<!-- Second Category -->
-		<LandingCategory/>
+		<LandingCategory :filterItems="homeTypes">
+			<template #text>
+				Find homes of a certain type
+			</template>
+		</LandingCategory>
 	</div>
 
 </div>

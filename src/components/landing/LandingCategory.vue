@@ -3,19 +3,30 @@ import ApartmentCardSmall from '../apartment-cards/ApartmentCardSmall.vue';
 import Carousel from '../carousel/Carousel.vue';
 import FilterButton from '../filter-button/FilterButton.vue';
 
+import {ref} from 'vue'
+
+const props = defineProps({
+    filterItems: {
+        type: Array,
+        default: ['De La Salle University', 'University of Coolness']
+    }
+})
+
+const selectedItems = ref([])
+
 </script>
 
 <template>
 <div class="h-fit flex flex-col w-full gap-3">
     <!-- Text -->
-    <div class="italic font-[20px] leading-6 font-light p-4">
+    <div class="italic text-[20px] leading-6 font-normal py-2">
         <slot name="text">Find homes near your university</slot>
     </div>
 
     <!-- Filters -->
-    <div class="flex items-center justify-around overflow-x-scroll">
-        <template v-for="i in 5">
-            <FilterButton/>
+    <div class="flex items-center justify-start gap-3 overflow-x-scroll pb-2">
+        <template v-for="i in props.filterItems">
+            <FilterButton v-model="selectedItems" :value="i">{{ i }}</FilterButton>
         </template>
     </div>
 
