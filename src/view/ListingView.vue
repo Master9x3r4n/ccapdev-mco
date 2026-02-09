@@ -12,7 +12,7 @@ import Divider from '@/components/divider/Divider.vue';
 <template>
     <div class="flex justify-around gap-8 m-8">
         <!-- Main Listing -->
-        <div class="flex flex-col gap-4 w-fit">
+        <div class="flex flex-col gap-4 w-fit flex-grow max-w-screen-lg]">
             <!-- Media Carousel -->
             <Carousel :count="1" buttonStyling="large">
                 <template #content>
