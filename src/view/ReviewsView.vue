@@ -48,8 +48,6 @@ const props = defineProps({
     }
 })
 
-const results = ref(3)
-
 </script>
 
 <template>
