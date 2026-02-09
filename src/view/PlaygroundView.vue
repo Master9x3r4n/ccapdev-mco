@@ -15,6 +15,7 @@
     import PageHeader from "@/components/header/PageHeader.vue";
 
     import {ref} from 'vue'
+import ListingInformation from '@/components/listing-content/ListingInformation.vue';
 
     const items= [1, 2, 3, 4, 5]
 
@@ -168,5 +169,11 @@
         </FullReviewCard>
         <FullReviewCard/> 
         </div>
+    </TestContainer>
+
+    <!-- Listing Information -->
+    <TestContainer dir="col">
+        <TestLabel>Listing Information</TestLabel>
+        <ListingInformation/>
     </TestContainer>
 </template>
