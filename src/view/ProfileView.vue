@@ -1,11 +1,23 @@
 <script setup>
 import ProfileSummary from "@/components/profile/ProfileSummary.vue";
+import ReviewPreview from "@/components/profile/ReviewPreview.vue";
+import PageButtons from "@/components/page-buttons/PageButtons.vue";
+import {ref} from "vue";
 const props = defineProps({
   profileBio: {
     type: String,
     default: "Hi, I am a student!",
   }
 });
+
+// Mock data - eventually this comes from your backend
+const reviews = ref([
+  { id: 1, title: 'Fantastic stay!', rating: '5.0', review: 'Loved the place.', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToYIB-2sFxlKxfD7--keSHhJfc6LnQJmwDwg&s'},
+  { id: 2, title: 'Lowkenuinely Mid', rating: '3.5', review: 'It was alright.', img: 'https://i.pinimg.com/736x/a9/7b/bb/a97bbbb18ff8a278542bf62308d722d2.jpg'},
+  { id: 3, title: 'It\'s A Bit Kirky At Night', rating: '2.0', review: 'Counting or not counting music at night?', img:'https://i.pinimg.com/736x/0f/39/ea/0f39ea017f6bbc2313a698f94cb6e6f8.jpg'},
+  { id: 4, title: 'Cleaner Than Y403', rating: '4.5', review: 'Very tidy.', img: 'https://i.pinimg.com/1200x/2c/6f/03/2c6f035e8736fd15a9c2ef04b52d8856.jpg'},
+  { id: 5, title: 'The Host was Gorjus', rating: '5.0', review: 'The host was kazuha from lesserafim wth.', img: 'https://i.pinimg.com/1200x/99/a4/6d/99a46de762454ef0f8897bf09f17f2f1.jpg'},
+]);
 
 const emit = defineEmits(['edit'])
 </script>
@@ -120,7 +132,26 @@ const emit = defineEmits(['edit'])
 
       <!-- Reviews column -->
       <div class="flex flex-col justify-center items-center gap-[20px] w-full max-w-[580px] min-h-[586px] grow order-1">
-        <div class="bg-gray-100 p-4 rounded">WE ARE CHARLIE KIRK, WE CARRY THE FLAME</div>
+
+        <div class="font-semibold text-[24px] leading-[29px] text-black w-full">
+          Reviews
+        </div>
+
+        <div class="flex flex-col w-full gap-[20px]">
+          <ReviewPreview
+              v-for="review in reviews"
+              :key="review.id"
+              :title="review.title"
+              :rating="review.rating"
+              :review="review.review"
+              :img="review.img"
+          />
+        </div>
+
+        <div class="flex justify-center items-center w-full mt-auto">
+          <PageButtons />
+        </div>
+
       </div>
 
     </div>
