@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 
-// State to track which page is active (defaults to 1)
+// ts cannot handle page counts of less than or more than 5
 const activePage = ref(1)
 const pages = [1, 2, 3, 4, 5]
 
@@ -29,8 +29,8 @@ const setPage = (page) => {
         class="flex flex-col justify-center items-center w-[28.37px] h-[37px] rounded-[10px] text-[16px] font-bold leading-[19px] transition-colors duration-200"
         :class="[
         activePage === page
-          ? 'bg-[#355AFF] text-white'  /* Active State (Frame 53) */
-          : 'text-[#BFBFBF] hover:text-[#355AFF] hover:bg-gray-100' /* Inactive State (Frame 54) */
+          ? 'bg-[#355AFF] text-white'
+          : 'text-[#BFBFBF] hover:text-[#355AFF] hover:bg-gray-100'
       ]"
     >
       {{ page }}
@@ -49,7 +49,6 @@ const setPage = (page) => {
 </template>
 
 <style scoped>
-/* Ensure you have the Inter font imported in your project */
 button {
   font-family: 'Inter', sans-serif;
 }
