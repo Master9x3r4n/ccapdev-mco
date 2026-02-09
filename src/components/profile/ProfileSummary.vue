@@ -9,7 +9,7 @@ const props = defineProps({
   },
   username: {
     type: String,
-    default: '@usernamehere'
+    default: '@number1masterdebater'
   },
   joinDate: {
     type: String,
@@ -27,7 +27,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex flex-row items-center gap-[20px] w-[504px] h-[150px]">
+  <div class="flex flex-row items-center gap-[20px] w-fill w-max-[1200px] h-[150px]">
 
     <ProfileIcon
         :src="profileImg"
@@ -35,7 +35,7 @@ const props = defineProps({
         size-class="w-[150px] h-[150px]"
     />
 
-    <div class="flex flex-col justify-center items-start gap-[20px] w-[334px] h-[122px]">
+    <div class="flex flex-col justify-center items-start gap-[20px] w-fill w-max-[600px] h-[122px]">
 
       <div class="flex flex-col items-start gap-[5px] w-full">
         <h1 class=" font-bold text-[32px] leading-[39px] text-black">
