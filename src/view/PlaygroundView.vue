@@ -12,9 +12,9 @@
     import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
     import FilterButton from '@/components/filter-button/FilterButton.vue';
     import ListingInformation from '@/components/listing-content/ListingInformation.vue';
+    import DarkModeSlider from '@/components/darkmode/DarkModeSlider.vue';
 
     import {ref} from 'vue'
-import DarkModeSlider from '@/components/darkmode/DarkModeSlider.vue';
 
     const items= [1, 2, 3, 4, 5]
 
