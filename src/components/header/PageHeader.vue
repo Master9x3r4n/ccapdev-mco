@@ -26,7 +26,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <header class="sticky top-0 z-50 flex h-[76px] w-full items-center bg-white px-4 py-3 shadow-md justify-between">
+  <header class="sticky top-0 z-50 flex h-[76px] w-full items-center bg-white dark:bg-[#111111] px-4 py-3 shadow-md justify-between">
     <Logo />
     <div :class="[{'invisible': !props.search}, 'w-full']">
       <SearchBar />
