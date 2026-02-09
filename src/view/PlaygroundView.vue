@@ -11,11 +11,9 @@
     import MediaContainer from '@/components/carousel/MediaContainer.vue';
     import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
     import FilterButton from '@/components/filter-button/FilterButton.vue';
-
-    import PageHeader from "@/components/header/PageHeader.vue";
+    import ListingInformation from '@/components/listing-content/ListingInformation.vue';
 
     import {ref} from 'vue'
-import ListingInformation from '@/components/listing-content/ListingInformation.vue';
 
     const items= [1, 2, 3, 4, 5]
 
@@ -42,7 +40,6 @@ import ListingInformation from '@/components/listing-content/ListingInformation.
 </script>
 
 <template>
-    <PageHeader></PageHeader>
     <!-- Dark Mode Button -->
     <TestContainer dir="row">
         <TestLabel>Theme</TestLabel>
