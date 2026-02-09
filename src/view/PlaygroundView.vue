@@ -10,11 +10,12 @@
     import SearchBar from "@/components/header/SearchBar.vue";
     import MediaContainer from '@/components/carousel/MediaContainer.vue';
     import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
-    import FilterButton from '@/components/filter-button/FilterButton.vue';
+    import FilterButton from '@/components/page-buttons/FilterButton.vue';
     import FooterComponent from '@/components/footer/FooterComponent.vue';
     import PageHeader from "@/components/header/PageHeader.vue";
 
     import {ref} from 'vue'
+    import PageButtons from "@/components/page-buttons/PageButtons.vue";
 
     const items= [1, 2, 3, 4, 5]
 
@@ -48,6 +49,11 @@
         <DarkModeButton />
     </TestContainer>
 
+    <!-- Dark Mode Button -->
+    <TestContainer dir="col">
+      <TestLabel>Page Buttons</TestLabel>
+      <PageButtons></PageButtons>
+    </TestContainer>
     <!-- Search Bar -->
     <TestContainer dir="col">
         <TestLabel>Search Bar</TestLabel>
