@@ -1,7 +1,7 @@
 <script setup>
 import SearchBar from "@/components/header/SearchBar.vue";
 import Logo from "@/components/header/Logo.vue";
-import ProfileIcon from "@/components/header/ProfileIcon.vue";
+import ProfileIcon from "@/components/profile/ProfileIcon.vue";
 import Dropdown from "@/components/header/Dropdown.vue";
 
 const props = defineProps({
