@@ -14,6 +14,7 @@
     import ListingInformation from '@/components/listing-content/ListingInformation.vue';
 
     import {ref} from 'vue'
+import DarkModeSlider from '@/components/darkmode/DarkModeSlider.vue';
 
     const items= [1, 2, 3, 4, 5]
 
@@ -43,7 +44,10 @@
     <!-- Dark Mode Button -->
     <TestContainer dir="row">
         <TestLabel>Theme</TestLabel>
-        <DarkModeButton />
+        <div class="flex gap-4">
+            <DarkModeButton />
+            <DarkModeSlider />
+        </div>
     </TestContainer>
 
     <!-- Search Bar -->
