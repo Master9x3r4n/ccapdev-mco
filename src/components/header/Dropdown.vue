@@ -52,8 +52,8 @@ onUnmounted(() => {
       <div
           v-show="isOpen"
           class="absolute right-0 top-full z-50 mt-2
-                 w-[311px] h-[314px]
-                 flex flex-col justify-center items-center p-[40px] gap-[20px]
+                 w-[311px] h-fit
+                 flex flex-col justify-center items-center p-8 gap-5
                  origin-top-right bg-white shadow-lg border border-gray-300 rounded-[40px] focus:outline-none"
       >
         <div class="py-1 w-full">
