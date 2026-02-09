@@ -6,8 +6,8 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
 </script>
 
 <template>
-    <!-- 1120 x 769 -->
-    <div class="w-295 h-228 p-5 flex flex-col items-center justify-center gap-6 border-b-[#BFBFBF] border border-b-3
+    <!-- 1120 x 769 h-228 -->
+    <div class="w-295 h-fit p-5 flex flex-col items-center justify-center gap-6.5 border-b-[#BFBFBF] border border-b-3
     bg-white">
         <!-- Header Container -->
         <div class="w-full flex justify-between items-center">
@@ -35,7 +35,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
         </div>
 
         <!-- Comment Container -->
-        <div class="flex flex-col justify-center grow gap-3 w-286 m-0">
+        <div class="flex flex-col justify-center grow gap-4 w-286 m-0">
             <!-- Review Container -->
             <div class="w-[99%] text-[20px] leading-6 grow pl-3 pr-3">
                 <slot name="review">
