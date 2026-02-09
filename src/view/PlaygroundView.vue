@@ -174,6 +174,13 @@ import ListingInformation from '@/components/listing-content/ListingInformation.
     <!-- Listing Information -->
     <TestContainer dir="col">
         <TestLabel>Listing Information</TestLabel>
-        <ListingInformation/>
+        <ListingInformation>
+            <template #listing-name>Hello World</template>
+            <template #description>
+                This apartment is very nice. It has nice rooms and is placed very nicely.
+                <br><br>
+                It also has nice neighbors and a lot of other nice things.
+            </template>
+        </ListingInformation>
     </TestContainer>
 </template>
