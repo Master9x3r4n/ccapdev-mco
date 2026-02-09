@@ -2,7 +2,7 @@
 </script>
 
 <template>
-    <footer class="h-55 w-lvw flex flex-col justify-center items-center gap-10
+    <footer class="h-55 w-full flex flex-col justify-center items-center gap-10
     bg-[#EAEAEA]">
         <!-- Pages -->
         <div class="w-[90%] flex">
