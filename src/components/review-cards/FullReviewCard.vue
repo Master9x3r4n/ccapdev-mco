@@ -3,6 +3,20 @@ import Carousel from '../carousel/Carousel.vue';
 import MediaContainer from '../carousel/MediaContainer.vue';
 import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
 
+const props = defineProps({
+    rating: {
+        type: Number,
+        default: 0
+    },
+    reviewer: {
+        type: Object,
+        default: {
+            name: "chud student",
+            count: 67
+        }
+    }
+})
+
 </script>
 
 <template>
@@ -17,15 +31,15 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
 
                 <!-- Name -->
                 <div>
-                    <div class="font-medium text-[20px] leading-6">chud student</div>
-                    <div class="font-normal leading-5 italic">67 Reviews</div>
+                    <div class="font-medium text-[20px] leading-6">{{ props.reviewer.name }}</div>
+                    <div class="font-normal leading-5 italic">{{ props.reviewer.count }} Reviews</div>
                 </div>
             </div>
 
             <!-- Rating -->
             <div class="flex justify-between items-center w-[8%] text-center">
                 <img src="@\assets\rating-assets\star-full.svg" width="36px">
-                <div class="font-bold text-3xl leading-10">4.0</div>
+                <div class="font-bold text-3xl leading-10">{{ props.rating.toFixed(1) }}</div>
             </div>
         </div>
 
@@ -38,7 +52,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
         <div class="flex flex-col justify-center grow gap-4 w-286 m-0">
             <!-- Review Container -->
             <div class="w-[99%] text-[20px] leading-6 grow pl-3 pr-3">
-                <slot name="review">
+                <slot name="review-content">
                     I have stayed at this apartment for a while, and let me say, it is as the name says. 
                     It's a really cool apartment and it has a lot of the amenities 
                     that a student would want from...
