@@ -15,6 +15,7 @@
     import DarkModeSlider from '@/components/darkmode/DarkModeSlider.vue';
 
     import {ref} from 'vue'
+    import PageButtons from "@/components/page-buttons/PageButtons.vue";
 
     const items= [1, 2, 3, 4, 5]
 

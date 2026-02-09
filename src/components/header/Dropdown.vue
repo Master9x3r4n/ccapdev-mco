@@ -3,6 +3,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const isOpen = ref(false)
 const dropdownRef = ref(null)
+dropdownRef.value = undefined;
 
 // Toggle open/close
 const toggle = () => {
