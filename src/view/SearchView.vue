@@ -29,10 +29,26 @@ const props = defineProps({
             name: "Miro's House",
             description: "Freshly doxxed, Miro's house is a beautiful home that features Miro.",
             ratingData: {
-                rating: 0.5,
+                rating: 3.5,
                 reviewCount: 67,
             }
-        }
+        },
+        {
+            name: "Yuchengco 404",
+            description: "The room where it all happened or maybe its just a reference to the error 404. Perfect for valentines day. (privacy not guaranteed)",
+            ratingData: {
+                rating: 0.5,
+                reviewCount: 69,
+            }
+        },
+        {
+            name: "Andrew 702",
+            description: "Im cooked for stalgcm",
+            ratingData: {
+                rating: 0,
+                reviewCount: 1,
+            }
+        },
         ]
     }
 })
