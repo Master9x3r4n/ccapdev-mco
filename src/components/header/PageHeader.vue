@@ -3,6 +3,7 @@ import SearchBar from "@/components/header/SearchBar.vue";
 import Logo from "@/components/header/Logo.vue";
 import ProfileIcon from "@/components/header/ProfileIcon.vue";
 import Dropdown from "@/components/header/Dropdown.vue";
+import DarkModeSlider from "../darkmode/DarkModeSlider.vue";
 
 const props = defineProps({
   search: {
@@ -80,6 +81,9 @@ const props = defineProps({
 
             <span class="text-[20px]">Settings</span>
           </a>
+
+          <div class="w-full"><DarkModeSlider/></div>
+
           <div class="w-[229px] h-[2px] bg-[#BFBFBF] mx-auto my-2"></div>
           <a class="flex flex-row items-center w-[231px] gap-[10px] p-2 -ml-2 rounded-md
           text-gray-900 hover:bg-gray-100 hover:text-[#355AFF]
