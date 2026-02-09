@@ -91,7 +91,7 @@ const props = defineProps({
             <!-- Upvote -->
             <div class="italic font-normal text-[16px] leading-6 flex items-center justify-around gap-2">
                 <ThumbsButton direction="up"/>
-                <div>-69</div>
+                <div><slot name="score">0</slot></div>
                 <ThumbsButton direction="down"/>
             </div>
         </div>

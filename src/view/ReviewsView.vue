@@ -14,6 +14,7 @@ const props = defineProps({
                 description: "Never have I ever found an apartment that makes me go \"ABSOLUTE CINEMA\""
             },
             rating: 5.0,
+            score: 123,
             reviewerProfile: {
                 name: "MetaGuelTheta",
                 count: 5
@@ -25,6 +26,7 @@ const props = defineProps({
                 description: "AHAHAHHHAHAHAHAHHAHAHAHAHAHHAHAHAHAHAHAHAHA"
             },
             rating: 3.5,
+            score: 64,
             reviewerProfile: {
                 name: "Sofialoccocus",
                 count: 42
@@ -36,6 +38,7 @@ const props = defineProps({
                 description: "Skibi toilet go kys (keep yourself safe)"
             },
             rating: 1.5,
+            score: -69,
             reviewerProfile: {
                 name: "Sussana Mogus",
                 count: 12
@@ -67,6 +70,7 @@ const results = ref(3)
                 <FullReviewCard :rating="i.rating" :reviewer="i.reviewerProfile">
                     <template #review-title>{{i.content.title}}</template>
                     <template #review-content>{{i.content.description}}</template>
+                    <template #score>{{ i.score }}</template>
                 </FullReviewCard>
             </div>
             <Divider v-if="index != props.reviews.length -1"/>
