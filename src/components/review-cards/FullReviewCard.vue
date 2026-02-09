@@ -23,8 +23,8 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
             </div>
 
             <!-- Rating -->
-            <div class="flex justify-between items-center w-1/12">
-                <img src="@\assets\rating-assets\star-full.svg" width="28px">
+            <div class="flex justify-between items-center w-[8%] text-center">
+                <img src="@\assets\rating-assets\star-full.svg" width="36px">
                 <div class="font-bold text-3xl leading-10">4.0</div>
             </div>
         </div>
