@@ -7,7 +7,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
 
 <template>
     <!-- 1120 x 769 h-228 -->
-    <div class="w-295 h-fit p-5 flex flex-col items-center justify-center gap-6.5 border-b-[#BFBFBF] border border-b-3
+    <div class="w-295 h-fit p-5 flex flex-col items-center justify-center gap-6.5
     bg-white">
         <!-- Header Container -->
         <div class="w-full flex justify-between items-center">
