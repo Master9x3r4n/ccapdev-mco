@@ -2,8 +2,6 @@
 import Divider from '@/components/divider/Divider.vue';
 import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
 
-import {ref} from 'vue'
-
 const props = defineProps({
     reviews: {
         type: Array,
@@ -54,7 +52,7 @@ const props = defineProps({
 </script>
 
 <template>
-<div class="flex justify-center w-full">
+<div class="flex justify-center w-full dark:bg-[#121422] dark:text-white">
     <div class="flex flex-col justify-around gap-4 m-7 w-fit">
         <!-- Body Header -->
         <div class="w-full flex justify-between items-center px-4.5">

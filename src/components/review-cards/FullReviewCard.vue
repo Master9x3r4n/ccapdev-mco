@@ -22,12 +22,12 @@ const props = defineProps({
 <template>
     <!-- 1120 x 769 h-228 -->
     <div class="w-295 h-fit p-5 flex flex-col items-center justify-center gap-6.5
-    bg-white">
+    bg-white dark:bg-[#121422] dark:text-white">
         <!-- Header Container -->
-        <div class="w-full flex justify-between items-center">
+        <div class="w-full flex justify-between items-center ">
             <div class="flex gap-3 items-center">
                 <!-- Profile -->
-                <div class="w-13 h-13 rounded-[50%] bg-amber-100 bg-gradient"></div>
+                <div class="w-13 h-13 rounded-[50%] bg-blue-300 bg-gradient"></div>
 
                 <!-- Name -->
                 <div>
@@ -74,7 +74,7 @@ const props = defineProps({
 
             <!-- Reply Container -->
             <div v-if="$slots.ownerReply && $slots.ownerReply !== ''" class="w-full h-[23%] mt-3 pl-2 pr-2">
-                <div class="bg-[#D9D9D9] h-full rounded-3xl
+                <div class="bg-[#D9D9D9] dark:bg-[#111111] h-full rounded-3xl
                 flex flex-col justify-start items-center p-5.5 gap-1.25">
                     <div class="italic text-left w-full text-[14px] leading-6">
                         Reply from the owner
