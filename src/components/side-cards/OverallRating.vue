@@ -60,7 +60,10 @@ const getOverallAttribute = () => {
         <template v-for="i in props.ratings.length">
             <div class="w-full text-2xl leading-7 flex items-center justify-between">
                 <!-- Attribute Name -->
-                <div>{{ props.ratings[i-1].name }}</div>
+                <div class="flex gap-3">
+                    <img src="@\assets\rating-assets\star-empty.svg" width="24px">
+                    <div>{{ props.ratings[i-1].name }}</div>
+                </div>
 
                 <!-- Rating -->
                 <div class="flex justify-between items-center w-[20%]">

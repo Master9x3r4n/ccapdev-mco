@@ -24,10 +24,10 @@
     :class="props.adjust">
         <div class="h-full w-full flex text-center items-center justify-center absolute">
             <span v-if="direction === 'left'">
-                <img src="@/assets/carousel-assets/caret-left.svg" width="48px" alt="<">
+                <img src="@/assets/carousel-assets/caret-left.svg" width="48px" alt="<" class="drop-shadow-2xl">
             </span>
             <span v-else>
-                <img src="@/assets/carousel-assets/caret-right.svg" width="48px" alt=">">
+                <img src="@/assets/carousel-assets/caret-right.svg" width="48px" alt=">" class="drop-shadow-2xl">
             </span>
         </div>
     </button>
