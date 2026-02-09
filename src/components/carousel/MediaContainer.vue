@@ -39,6 +39,10 @@ const props = defineProps({
     @apply w-185 h-107.5
 }
 
+.wide {
+    @apply w-185 h-84
+}
+
 .medium {
     @apply size-67
 }
