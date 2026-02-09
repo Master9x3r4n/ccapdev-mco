@@ -13,31 +13,37 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: LandingView,
+      meta: {search: false},
     },
     {
       path: "/playground",
       name: "playground",
       component: PlaygroundView,
+      meta: {search: true},
     },
     {
       path: "/listing",
       name: "listing",
       component: ListingView,
+      meta: {search: true},
     },
     {
       path: "/profile",
       name: "profile",
       component: ProfileView,
+      meta: {search: true},
     },
     {
       path: "/reviews",
       name: "reviews",
-      component: ReviewsView
+      component: ReviewsView,
+      meta: {search: true},
     },
     {
       path: "/search",
       name: "search",
-      component: SearchView
+      component: SearchView,
+      meta: {search: true},
     }
   ],
 })

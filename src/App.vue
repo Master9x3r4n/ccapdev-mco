@@ -1,12 +1,19 @@
 <script setup>
-  import {RouterView} from "vue-router";
+  import {RouterView, useRoute} from "vue-router";
   import FooterComponent from "./components/footer/FooterComponent.vue";
   import PageHeader from "@/components/header/PageHeader.vue";
+
+  const route = useRoute();
 </script>
 
 <template>
   <div>
-    <PageHeader/>
+    <template v-if="!route.meta.search">
+        <PageHeader :search="false"/>
+    </template>
+    <template v-else>
+		<PageHeader/>
+	</template>
     <RouterView />
     <FooterComponent/>
   </div>
