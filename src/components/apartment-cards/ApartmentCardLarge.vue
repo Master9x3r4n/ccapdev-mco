@@ -3,10 +3,15 @@ import CardRating from '@/components/rating/CardRating.vue';
 
 const props = defineProps({
     ratingData: {
+        type: Object,
         default: {
             rating: 4,
             reviewCount: 32
         }
+    },
+    imageSrc: {
+        type: String,
+        default: ""
     }
 })
 
@@ -22,7 +27,9 @@ const props = defineProps({
         <div class=
         "h-full w-5/12 rounded-l-[25px] 
         absolute left-0 bottom-0 top-0
-        bg-gradient"></div>
+        bg-gradient flex items-center justify-center">
+            <img v-if="props.imageSrc" :src="props.imageSrc" class="h-full w-full rounded-l-[25px]">
+        </div>
 
         <!-- Frame -->
        <div class=" absolute right-8 w-[36%] h-[80%] flex flex-col">
