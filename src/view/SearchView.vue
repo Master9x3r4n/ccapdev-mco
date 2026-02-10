@@ -52,7 +52,7 @@ const props = defineProps({
                 rating: 0,
                 reviewCount: 1,
             },
-            imageSrc: ""
+            imageSrc: "https://media.tenor.com/2VoKHsd5G0gAAAAe/brain-shrink-our-brains-are-shrinking.png"
         },
         ]
     }
