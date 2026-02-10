@@ -38,7 +38,7 @@ const getOverallAttribute = () => {
 <template>
     <div class="flex flex-col justify-center items-center 
     p-10 gap-3.75 w-105.25 h-79.25 border-3 rounded-3xl
-    border-[#BFBFBF] bg-white">
+    border-[#BFBFBF] bg-white dark:bg-[#111111] dark:border-[#111111] dark:text-white">
         <!-- Header Container -->
         <div class="h-12 w-full font-bold text-3xl leading-10 
         flex items-center justify-between">

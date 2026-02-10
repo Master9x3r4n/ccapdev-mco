@@ -5,7 +5,7 @@ import Divider from '../divider/Divider.vue';
 </script>
 
 <template>
-<div class="flex flex-col justify-around items-center gap-5 mb-2">
+<div class="flex flex-col justify-around items-center gap-5 mb-2 dark:text-white">
     <!-- Apartment Header -->
     <div class="w-full flex flex-col gap-6">
         <!-- Profile -->

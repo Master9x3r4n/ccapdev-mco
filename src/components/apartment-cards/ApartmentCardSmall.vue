@@ -16,7 +16,7 @@ const props = defineProps({
     <div class=
     "h-86 w-110 rounded-[25px] 
     p-0 shadow-2xl relative
-    bg-white flex flex-col items-center dark:bg-black">
+    bg-white flex flex-col items-center dark:bg-[#111111]">
         <!-- Photo h-40%-->
         <div class=
         "w-full h-5/12 rounded-t-[25px] 

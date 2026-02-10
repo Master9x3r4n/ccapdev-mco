@@ -17,7 +17,7 @@ const props = defineProps({
     <div class=
     "h-86 w-304 rounded-[25px] 
     p-0 shadow-2xl relative
-    bg-white flex flex-row items-center">
+    bg-white flex flex-row items-center dark:bg-[#111111]">
         <!-- Photo h-40%-->
         <div class=
         "h-full w-5/12 rounded-l-[25px] 
@@ -30,7 +30,7 @@ const props = defineProps({
             <div class="flex flex-col justify-end text-right gap-6 grow">
                 <!-- Apartment Name -->
                 <div>
-                    <h1 class="font-bold text-[32px] leading-10">
+                    <h1 class="font-bold text-[32px] leading-10 dark:text-white">
                         <slot name="header">
                             Apartment Name
                         </slot>
@@ -39,7 +39,7 @@ const props = defineProps({
 
                 <!-- Apartment Description -->
                 <div class="h-[60%]">
-                    <p class="italic font-normal text-[20px] leading-6">
+                    <p class="italic font-normal text-[20px] leading-6 dark:text-white">
                         <slot name="description">
                             This apartment is very nice. It has 
                             nice rooms and is placed very nicely.

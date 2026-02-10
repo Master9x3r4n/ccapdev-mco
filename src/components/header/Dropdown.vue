@@ -55,7 +55,9 @@ onUnmounted(() => {
           class="absolute right-0 top-full z-50 mt-2
                  w-[311px] h-fit
                  flex flex-col justify-center items-center p-8 gap-5
-                 origin-top-right bg-white shadow-lg border border-gray-300 rounded-[40px] focus:outline-none"
+                 origin-top-right  focus:outline-none rounded-[40px]
+                 bg-white shadow-lg border border-gray-300 
+                  dark:bg-[#111111] dark:border-[#111111]"
       >
         <div class="py-1 w-full">
           <slot name="content"></slot>
