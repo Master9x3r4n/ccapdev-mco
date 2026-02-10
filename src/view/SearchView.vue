@@ -61,7 +61,7 @@ const props = defineProps({
         <!-- Body Header -->
         <div class="w-full flex justify-between items-center px-2">
             <!-- Search Result -->
-            <div class="font-light text-[20px] italic leading-6">Found {{ props.searchResults.length }} results for “{{ props.searchQuery }}”</div>
+            <div class="font-light text-[20px] italic leading-6 dark:text-white">Found {{ props.searchResults.length }} results for “{{ props.searchQuery }}”</div>
 
             <!-- Filter Button -->
             <div class="flex justify-center items-center py-1 px-3.75 border-2 rounded-[40px]

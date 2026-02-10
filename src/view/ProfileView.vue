@@ -33,7 +33,7 @@ const emit = defineEmits(['edit'])
       <div class="flex flex-col justify-between items-start gap-5 w-full max-w-[580px]">
         <!-- Biography and edit container -->
         <div class="flex flex-row justify-between items-start gap-5 w-full max-w-[580px] h-[29px] self-stretch flex-none order-0">
-          <h2 class="font-semibold text-[24px] leading-[29px] text-black">
+          <h2 class="font-semibold text-[24px] leading-[29px] text-black dark:text-white">
             Biography
           </h2>
 
@@ -49,7 +49,7 @@ const emit = defineEmits(['edit'])
           </button>
         </div>
           <!-- Bio text container -->
-          <span class="text-[16px] leading-[19px]">{{ profileBio }}</span>
+          <span class="text-[16px] leading-[19px] dark:text-white">{{ profileBio }}</span>
         <!-- separator -->
         <div class="w-full h-[2px] bg-[#BFBFBF] mx-auto my-2"></div>
 
@@ -70,7 +70,7 @@ const emit = defineEmits(['edit'])
             </div>
 
             <div class="flex flex-col justify-center items-start gap-[5px] h-[39px] flex-none order-2">
-              <span class="font-semibold text-[16px] leading-[19px] text-black">
+              <span class="font-semibold text-[16px] leading-[19px] text-black dark:text-white">
                 De La Salle University
               </span>
               <span class="italic font-normal text-[12px] leading-[15px] text-[#676767]">
@@ -94,7 +94,7 @@ const emit = defineEmits(['edit'])
             </div>
 
             <div class="flex flex-col justify-center items-start gap-[5px] h-[39px] flex-none order-2">
-              <a class="font-semibold text-[16px] leading-[19px] text-black underline">
+              <a class="font-semibold text-[16px] leading-[19px] text-black underline dark:text-white">
                 Some Other Fantastic Dorm
               </a>
               <span class="italic font-normal text-[12px] leading-[15px] text-[#676767]">
@@ -118,7 +118,7 @@ const emit = defineEmits(['edit'])
             </div>
 
             <div class="flex flex-col justify-center items-start gap-[5px] h-[39px] flex-none order-2">
-              <span class="font-semibold text-[16px] leading-[19px] text-black">
+              <span class="font-semibold text-[16px] leading-[19px] text-black dark:text-white">
                 67,676,767
               </span>
               <span class="italic font-normal text-[12px] leading-[15px] text-[#676767]">
@@ -133,7 +133,7 @@ const emit = defineEmits(['edit'])
       <!-- Reviews column -->
       <div class="flex flex-col justify-center items-center gap-[20px] w-full max-w-[580px] min-h-[586px] grow order-1">
 
-        <div class="font-semibold text-[24px] leading-[29px] text-black w-full">
+        <div class="font-semibold text-[24px] leading-[29px] text-black w-full dark:text-white">
           Reviews
         </div>
 

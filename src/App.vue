@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <div>
+  <div class="dark:bg-[#121422]">
     <template v-if="!route.meta.search">
         <PageHeader :search="false"/>
     </template>
