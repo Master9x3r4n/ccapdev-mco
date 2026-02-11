@@ -26,7 +26,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <header class="sticky top-0 z-50 flex h-[76px] w-full items-center bg-white dark:bg-[#111111] px-4 py-3 shadow-md justify-between">
+  <header class="sticky top-0 z-50 flex h-[76px] w-full items-center bg-white dark:bg-[#111111] px-4 py-3 shadow-md justify-between transition-colors duration-200">
     <Logo />
     <div :class="[{'invisible': !props.search}, 'w-full']">
       <SearchBar />
@@ -39,6 +39,7 @@ const props = defineProps({
       </template>
       <template #content>
         <div class="flex flex-col justify-between items-center gap-2">
+
           <div class="flex flex-row items-center w-[231px] h-[58px] gap-[15px]">
             <ProfileIcon
                 :src="profileImg"
@@ -46,20 +47,21 @@ const props = defineProps({
                 size-class="w-[58px] h-[58px]"
             />
             <div class="flex flex-col justify-center items-start w-[158px] h-[48px] grow">
-              <span class="text-[#676767] text-[16px] leading-[19px]">
-              Logged in as
+              <span class="text-[#676767] dark:text-gray-400 text-[16px] leading-[19px]">
+                Logged in as
               </span>
 
               <span class="text-[#355AFF] text-[24px] leading-[29px]">
-              @{{ username }}
+                @{{ username }}
               </span>
             </div>
           </div>
 
-          <div class="w-[229px] h-[2px] bg-[#BFBFBF] mx-auto my-2"></div>
+          <div class="w-[229px] h-[2px] bg-[#BFBFBF] dark:bg-gray-700 mx-auto my-2 transition-colors duration-200"></div>
 
           <a class="flex flex-row items-center w-[231px] gap-[10px] p-2 -ml-2 rounded-md
-          text-gray-900 hover:bg-gray-100 hover:text-[#355AFF]
+          text-gray-900 dark:text-white
+          hover:bg-gray-100 dark:hover:bg-[#1E1E1E] hover:text-[#355AFF] dark:hover:text-[#355AFF]
           transition-colors duration-200 cursor-pointer">
 
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +73,8 @@ const props = defineProps({
           </a>
 
           <a class="flex flex-row items-center w-[231px] gap-[10px] p-2 -ml-2 rounded-md
-          text-gray-900 hover:bg-gray-100 hover:text-[#355AFF]
+          text-gray-900 dark:text-white
+          hover:bg-gray-100 dark:hover:bg-[#1E1E1E] hover:text-[#355AFF] dark:hover:text-[#355AFF]
           transition-colors duration-200 cursor-pointer">
 
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,9 +87,11 @@ const props = defineProps({
 
           <div class="w-full"><DarkModeSlider/></div>
 
-          <div class="w-[229px] h-[2px] bg-[#BFBFBF] mx-auto my-2"></div>
+          <div class="w-[229px] h-[2px] bg-[#BFBFBF] dark:bg-gray-700 mx-auto my-2 transition-colors duration-200"></div>
+
           <a class="flex flex-row items-center w-[231px] gap-[10px] p-2 -ml-2 rounded-md
-          text-gray-900 hover:bg-gray-100 hover:text-[#355AFF]
+          text-gray-900 dark:text-white
+          hover:bg-gray-100 dark:hover:bg-[#1E1E1E] hover:text-[#355AFF] dark:hover:text-[#355AFF]
           transition-colors duration-200 cursor-pointer">
 
             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor">
