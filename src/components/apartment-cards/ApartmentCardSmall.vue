@@ -2,10 +2,16 @@
 import CardRating from '@/components/rating/CardRating.vue';  
 
 const props = defineProps({
-    ratingData: {
+    cardData: {
+        type: Object,
         default: {
-            rating: 4,
-            reviewCount: 32
+            name: "Apartment Name",
+            description: "This apartment is very nice. It has very nice rooms and is placed very nicely.",
+            imageSrc: "",
+            ratingData: {
+                rating: 4,
+                reviewCount: 32
+            }
         }
     }
 })
@@ -21,7 +27,9 @@ const props = defineProps({
         <div class=
         "w-full h-5/12 rounded-t-[25px] 
         absolute left-0 right-0 top-0
-        bg-gradient"></div>
+        bg-gradient">
+            <img v-if="props.imageSrc" :src="props.imageSrc" class="w-full h-5/12 rounded-t-[25px]">
+        </div>
 
         <!-- Frame -->
        <div class=" absolute top-[45%] w-[90%] h-[50%] ">
@@ -29,19 +37,15 @@ const props = defineProps({
             <div class="h-[50%] flex flex-col justify-between">
                 <!-- Apartment Name -->
                 <div>
-                    <h1 class="font-bold text-[32px] leading-10 dark:text-white">
-                        <slot name="header">
-                            Apartment Name
-                        </slot>
+                    <h1 class="font-bold text-[32px] leading-10 dark:text-white hover:underline">   
+                        <RouterLink to="/listing">{{ props.cardData.name }}</RouterLink>
                     </h1>
                 </div>
 
                 <!-- Apartment Description -->
                 <div>
                     <p class="italic font-normal text-[20px] leading-6 dark:text-white">
-                        <slot name="description">
-                            This apartment is very nice. It has very nice rooms and is placed very nicely.
-                        </slot>
+                        {{ props.cardData.description }}
                     </p>
                 </div>
             </div>
@@ -49,8 +53,8 @@ const props = defineProps({
             <!-- Lower Review Container -->
             <div class="h-[50%] flex justify-end items-end">
                 <CardRating 
-                :rating="ratingData['rating']" 
-                :reviewCount="ratingData['reviewCount']"/>
+                :rating="props.cardData.ratingData.rating" 
+                :reviewCount="props.cardData.ratingData.reviewCount"/>
             </div>
        </div>
     </div>

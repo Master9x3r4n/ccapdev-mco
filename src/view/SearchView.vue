@@ -36,24 +36,6 @@ const props = defineProps({
             },
             imageSrc: "https://static.wikitide.net/peppafanonwiki/thumb/e/ee/Peppa%27s_house_updated.webp/800px-Peppa%27s_house_updated.webp.png"
         },
-        {
-            name: "Yuchengco 404",
-            description: "The room where it all happened or maybe its just a reference to the error 404. Perfect for valentines day. (privacy not guaranteed)",
-            ratingData: {
-                rating: 0.5,
-                reviewCount: 69,
-            },
-            imageSrc: "https://upload.wikimedia.org/wikipedia/en/c/c2/Yuchengco_Hall.jpg"
-        },
-        {
-            name: "Andrew 702",
-            description: "Im cooked for stalgcm",
-            ratingData: {
-                rating: 0,
-                reviewCount: 1,
-            },
-            imageSrc: "https://media.tenor.com/2VoKHsd5G0gAAAAe/brain-shrink-our-brains-are-shrinking.png"
-        },
         ]
     }
 })
@@ -79,14 +61,7 @@ const props = defineProps({
         <div class="h-fit w-full flex flex-col gap-8">
             <template v-for="i in props.searchResults">
             <div>
-            <ApartmentCardLarge :ratingData="i.ratingData" :imageSrc="i.imageSrc">
-                <template #header>
-                    {{ i.name }}
-                </template>
-                <template #description>
-                    {{ i.description }}
-                </template>
-            </ApartmentCardLarge>
+            <ApartmentCardLarge :cardData="i"/>
             </div>
             </template>
         </div>

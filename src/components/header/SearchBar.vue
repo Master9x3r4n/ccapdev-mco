@@ -1,5 +1,8 @@
 <script setup>
 import { ref, computed, nextTick } from "vue";
+import { useRouter, useRoute } from 'vue-router';
+
+const router = useRouter(); 
 
 const props = defineProps({
   type: {
@@ -36,6 +39,10 @@ const clearSearch = () => {
   searchQuery.value = "";
   nextTick(() => inputRef.value?.focus());
 };
+
+//route to search page
+const routeSearch = () => { router.push('/search') }
+
 </script>
 
 <template>
@@ -47,6 +54,7 @@ const clearSearch = () => {
       ]"
     >
       <button
+          @click="routeSearch"
           v-if="props.type === 'default'"
           :class="[theme.searchBtn, 'flex items-center justify-center transition-colors']"
           aria-label="Search"
@@ -71,7 +79,8 @@ const clearSearch = () => {
         <ClearIcon />
       </button>
 
-      <button
+      <button 
+          @click="routeSearch"
           v-if="props.type === 'alt'"
           :class="[theme.searchBtn, 'flex items-center justify-center transition-colors']"
           aria-label="Search"
