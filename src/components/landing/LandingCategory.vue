@@ -32,7 +32,7 @@ const selectedItems = ref([])
 
     <!-- Carousel Container-->
     <div class="h-fit w-full flex justify-start">
-        <Carousel :count="2"  buttonStyling="small circular" :buttonSpacing="1">
+        <Carousel count="5" buttonStyling="small circular" :buttonSpacing="1">
             <template #content>
             <template v-for="i in 5">
                 <div class="px-3 flex shrink-0 snap-start">
