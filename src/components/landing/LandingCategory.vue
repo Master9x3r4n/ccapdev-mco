@@ -9,6 +9,22 @@ const props = defineProps({
     filterItems: {
         type: Array,
         default: ['De La Salle University', 'University of Coolness']
+    },
+    searchResults: {
+        type: Array,
+        default: []
+    },
+    cardResults: {
+        type: Array,
+        default: [{
+            name: "Apartment Name",
+            description: "This apartment is very nice. It has very nice rooms and is placed very nicely.",
+            imageSrc: "",
+            ratingData: {
+                rating: 4,
+                reviewCount: 32
+            }
+        }]
     }
 })
 
@@ -32,16 +48,11 @@ const selectedItems = ref([])
 
     <!-- Carousel Container-->
     <div class="h-fit w-full flex justify-start">
-        <Carousel count="5" buttonStyling="small circular" :buttonSpacing="1">
+        <Carousel :count="5" buttonStyling="small circular" :buttonSpacing="1">
             <template #content>
-            <template v-for="i in 5">
+            <template v-for="i in props.cardResults">
                 <div class="px-3 flex shrink-0 snap-start">
-                <ApartmentCardSmall
-                :ratingData="{rating: 5 - i + 0.5, reviewCount: (i)* 6}">
-                    <template #header>
-                        Apartment {{ i }}
-                    </template>
-                </ApartmentCardSmall>
+                <ApartmentCardSmall :cardData="i"/>
                 </div>
             </template>
             </template>

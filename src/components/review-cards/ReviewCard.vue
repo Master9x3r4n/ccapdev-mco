@@ -74,7 +74,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
         <div class="w-full h-[16%] flex justify-between items-center mt-1">
             <!-- Show More -->
             <div class="font-semibold underline text-[16px] leading-6">
-                Show More
+                <RouterLink to="/reviews">Show More</RouterLink>
             </div>
 
             <!-- Upvote -->

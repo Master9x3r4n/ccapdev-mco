@@ -5,20 +5,20 @@ const props = defineProps({
         type: Array,
         default: [
             {
-                name: "Attribute 1",
-                rating: 0
+                name: "Cleanliness",
+                rating: 4
             },
             {
-                name: "Attribute 2",
-                rating: 0
+                name: "Comfort",
+                rating: 4
             },
             {
-                name: "Attribute 3",
-                rating: 0
+                name: "Spaciousness",
+                rating: 3
             },
             {
-                name: "Attribute 4",
-                rating: 0
+                name: "Price",
+                rating: 2
             }
         ]
     }

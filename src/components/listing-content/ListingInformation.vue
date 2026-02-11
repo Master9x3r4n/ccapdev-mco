@@ -38,12 +38,10 @@ import Divider from '../divider/Divider.vue';
 
     <!-- Amenities -->
     <Divider/>
-    <div class="flex flex-col h-54 w-full">
+    <div class="flex flex-col h-fit max-h-54 w-full">
         <div class="sub-heading">Amenities</div>
         <ul class="flex flex-col flex-wrap gap-4 h-[70%]">
-            <li v-for="i in 8">
-                ℹ️ Faceboook or whatever
-            </li>
+             <li v-for="i in ['2 Bedrooms', '2 Bathrooms', '3 Dining Rooms', '10 Living Rooms']">ℹ️ {{ i }}</li>
         </ul>
     </div>
 
@@ -60,8 +58,8 @@ import Divider from '../divider/Divider.vue';
         <div class="sub-heading">Contact</div>
         <div>
             <ul class="flex flex-col gap-4">
-                <li v-for="i in 3">
-                    ℹ️ Faceboook or whatever
+                <li v-for="i in ['Facebook', 'Instagram']">
+                    ℹ️ {{ i }}
                 </li>
             </ul>
         </div>
