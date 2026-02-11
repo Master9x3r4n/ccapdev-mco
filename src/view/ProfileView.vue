@@ -3,6 +3,7 @@ import ProfileSummary from "@/components/profile/ProfileSummary.vue";
 import ReviewPreview from "@/components/profile/ReviewPreview.vue";
 import PageButtons from "@/components/page-buttons/PageButtons.vue";
 import {ref} from "vue";
+import Divider from "@/components/divider/Divider.vue";
 const props = defineProps({
   profileBio: {
     type: String,
@@ -10,7 +11,6 @@ const props = defineProps({
   }
 });
 
-// Mock data - eventually this comes from your backend
 const reviews = ref([
   { id: 1, title: 'Fantastic stay!', rating: '5.0', review: 'Loved the place.', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToYIB-2sFxlKxfD7--keSHhJfc6LnQJmwDwg&s'},
   { id: 2, title: 'Lowkenuinely Mid', rating: '3.5', review: 'It was alright.', img: 'https://i.pinimg.com/736x/a9/7b/bb/a97bbbb18ff8a278542bf62308d722d2.jpg'},
@@ -51,7 +51,7 @@ const emit = defineEmits(['edit'])
           <!-- Bio text container -->
           <span class="text-[16px] leading-[19px] dark:text-white">{{ profileBio }}</span>
         <!-- separator -->
-        <div class="w-full h-[2px] bg-[#BFBFBF] mx-auto my-2"></div>
+        <Divider></Divider>
 
         <!-- Profile details container-->
         <div class="flex flex-col items-start gap-[20px] w-full max-w-[580px] min-h-[157px] flex-none order-2 self-stretch">

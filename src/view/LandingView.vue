@@ -32,10 +32,8 @@ const homeTypes = [
 			</div>
 
 			<!-- Search bar -->
-			<div class="w-full h-full relative">
-				<div class="absolute right-2 top-0 w-148">
-					<SearchBar type="alt"/>
-				</div>
+			<div class="flex justify-end w-full h-full relative mt-5 mr-12">
+        <SearchBar type="alt"/>
 			</div>		
 		</div>
 	
