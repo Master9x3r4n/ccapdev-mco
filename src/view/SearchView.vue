@@ -15,7 +15,8 @@ const props = defineProps({
             ratingData: {
                 rating: 4.5,
                 reviewCount: 124,
-            }
+            },
+            imageSrc: "https://youre.outof.games/media/uploads/cb/da/cbda1bb4-ee0d-4c65-989f-05a24edd22cf/daily-bugle-featured-location.jpg"
         },
         {
             name: "The Baxter Suite",
@@ -23,7 +24,8 @@ const props = defineProps({
             ratingData: {
                 rating: 4,
                 reviewCount: 44,
-            }
+            },
+            imageSrc: "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/rsz-baxter-buildingv1.jpg"
         },
         {
             name: "Miro's House",
@@ -31,7 +33,8 @@ const props = defineProps({
             ratingData: {
                 rating: 3.5,
                 reviewCount: 67,
-            }
+            },
+            imageSrc: "https://static.wikitide.net/peppafanonwiki/thumb/e/ee/Peppa%27s_house_updated.webp/800px-Peppa%27s_house_updated.webp.png"
         },
         {
             name: "Yuchengco 404",
@@ -39,7 +42,8 @@ const props = defineProps({
             ratingData: {
                 rating: 0.5,
                 reviewCount: 69,
-            }
+            },
+            imageSrc: "https://upload.wikimedia.org/wikipedia/en/c/c2/Yuchengco_Hall.jpg"
         },
         {
             name: "Andrew 702",
@@ -47,7 +51,8 @@ const props = defineProps({
             ratingData: {
                 rating: 0,
                 reviewCount: 1,
-            }
+            },
+            imageSrc: "https://media.tenor.com/2VoKHsd5G0gAAAAe/brain-shrink-our-brains-are-shrinking.png"
         },
         ]
     }
@@ -61,7 +66,7 @@ const props = defineProps({
         <!-- Body Header -->
         <div class="w-full flex justify-between items-center px-2">
             <!-- Search Result -->
-            <div class="font-light text-[20px] italic leading-6">Found {{ props.searchResults.length }} results for “{{ props.searchQuery }}”</div>
+            <div class="font-light text-[20px] italic leading-6 dark:text-white">Found {{ props.searchResults.length }} results for “{{ props.searchQuery }}”</div>
 
             <!-- Filter Button -->
             <div class="flex justify-center items-center py-1 px-3.75 border-2 rounded-[40px]
@@ -74,7 +79,7 @@ const props = defineProps({
         <div class="h-fit w-full flex flex-col gap-8">
             <template v-for="i in props.searchResults">
             <div>
-            <ApartmentCardLarge :ratingData="i.ratingData">
+            <ApartmentCardLarge :ratingData="i.ratingData" :imageSrc="i.imageSrc">
                 <template #header>
                     {{ i.name }}
                 </template>

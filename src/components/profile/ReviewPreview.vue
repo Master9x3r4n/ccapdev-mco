@@ -30,10 +30,10 @@ defineProps({
       ></div>
 
       <div class="flex flex-col justify-center items-start gap-[5px]">
-        <h3 class="font-semibold text-[20px] leading-[24px] text-black">
+        <h3 class="font-semibold text-[20px] leading-[24px] text-black dark:text-white">
           {{ title }}
         </h3>
-        <p class="italic font-normal text-[16px] leading-[19px] text-black">
+        <p class="italic font-normal text-[16px] leading-[19px] text-black dark:text-white">
           {{ review }}
         </p>
       </div>
@@ -48,7 +48,7 @@ defineProps({
         </svg>
       </div>
 
-      <span class="font-bold text-[24px] leading-[29px] text-black">
+      <span class="font-bold text-[24px] leading-[29px] text-black dark:text-white">
         {{ rating }}
       </span>
 

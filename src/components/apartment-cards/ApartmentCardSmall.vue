@@ -16,7 +16,7 @@ const props = defineProps({
     <div class=
     "h-86 w-110 rounded-[25px] 
     p-0 shadow-2xl relative
-    bg-white flex flex-col items-center">
+    bg-white flex flex-col items-center dark:bg-[#111111]">
         <!-- Photo h-40%-->
         <div class=
         "w-full h-5/12 rounded-t-[25px] 
@@ -24,12 +24,12 @@ const props = defineProps({
         bg-gradient"></div>
 
         <!-- Frame -->
-       <div class=" absolute top-[45%] w-[90%] h-[50%]">
+       <div class=" absolute top-[45%] w-[90%] h-[50%] ">
             <!-- Upper Container -->
             <div class="h-[50%] flex flex-col justify-between">
                 <!-- Apartment Name -->
                 <div>
-                    <h1 class="font-bold text-[32px] leading-10">
+                    <h1 class="font-bold text-[32px] leading-10 dark:text-white">
                         <slot name="header">
                             Apartment Name
                         </slot>
@@ -38,7 +38,7 @@ const props = defineProps({
 
                 <!-- Apartment Description -->
                 <div>
-                    <p class="italic font-normal text-[20px] leading-6">
+                    <p class="italic font-normal text-[20px] leading-6 dark:text-white">
                         <slot name="description">
                             This apartment is very nice. It has very nice rooms and is placed very nicely.
                         </slot>

@@ -19,12 +19,12 @@ const selectedItems = ref([])
 <template>
 <div class="h-fit flex flex-col w-full gap-3">
     <!-- Text -->
-    <div class="italic text-[20px] leading-6 font-normal py-2">
+    <div class="italic text-[20px] leading-6 font-normal py-2 dark:text-white">
         <slot name="text">Find homes near your university</slot>
     </div>
 
     <!-- Filters -->
-    <div class="flex items-center justify-start gap-3 overflow-x-scroll pb-2">
+    <div class="flex items-center justify-start gap-3 overflow-x-scroll hide-scrollbar pb-2">
         <template v-for="i in props.filterItems">
             <FilterButton v-model="selectedItems" :value="i">{{ i }}</FilterButton>
         </template>

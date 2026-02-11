@@ -6,7 +6,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
 
 <template>
     <div class="flex flex-col justify-center items-center 
-    p-2 pb-4 gap-4.5 w-105.25 h-fit bg-white">
+    p-2 pb-4 gap-4.5 w-105.25 h-fit bg-white dark:bg-[#121422] dark:text-white">
         <!-- Header Container -->
         <div class="w-full flex justify-between items-center">
             <div class="flex gap-3 items-center">
@@ -47,7 +47,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
 
                 <!-- Media -->
                 <div class="shrink-0 ml-2 relative">
-                    <div class="absolute bg-white p-auto pl-1 rounded-full size-6 top-16 right-2 text-[14px]">+3</div>
+                    <div class="absolute bg-white dark:bg-[#111111] p-auto pl-1 rounded-full size-6 top-16 right-2 text-[14px] dark:text-white">+3</div>
                     <MediaContainer size="small"/>
                 </div>
 
@@ -57,7 +57,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
             <template v-if="$slots.ownerReply">
             <!-- Reply Container -->
             <div class="w-full h-[50%] mt-3">
-                <div class="bg-[#D9D9D9] h-full rounded-3xl 
+                <div class="bg-[#D9D9D9] dark:bg-[#111111] h-full rounded-3xl 
                 flex flex-col justify-center items-center p-5 gap-1.25">
                     <div class="italic text-left w-full text-[14px] leading-6">
                         Reply from the owner

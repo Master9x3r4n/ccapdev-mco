@@ -38,11 +38,11 @@ const props = defineProps({
     <div class="flex flex-col justify-center items-start gap-[20px] w-fill w-max-[600px] h-[122px]">
 
       <div class="flex flex-col items-start gap-[5px] w-full">
-        <h1 class=" font-bold text-[32px] leading-[39px] text-black">
+        <h1 class=" font-bold text-[32px] leading-[39px] text-black dark:text-white">
           {{ name }}
         </h1>
 
-        <p class="text-[16px] leading-[19px] text-black">
+        <p class="text-[16px] leading-[19px] text-black dark:text-white">
           {{ username }} • <span class="italic text-gray-400">Joined {{ joinDate }}</span>
         </p>
       </div>

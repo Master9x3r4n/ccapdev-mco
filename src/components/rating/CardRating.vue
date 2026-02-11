@@ -36,7 +36,7 @@ const getImageUrl = (index) => {
     <!-- Flex-end container -->
     <div class="w-[85%] h-[50%] flex">
         <!-- Review Information -->
-        <div class="flex flex-col h-full shrink-0 text-right justify-center p-1">
+        <div class="flex flex-col h-full shrink-0 text-right justify-center p-1 dark:text-white">
             <h1 class="font-normal text-[20px] leading-5">
                 {{ parseRating() }}
             </h1>
