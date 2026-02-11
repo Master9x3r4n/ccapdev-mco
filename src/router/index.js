@@ -6,6 +6,9 @@ import ProfileView from '../view/ProfileView.vue'
 import ReviewsView from '../view/ReviewsView.vue'
 import SearchView from '../view/SearchView.vue'
 import LoginView from "@/view/LoginView.vue";
+import ProfileEx1 from "@/view/ProfileEx1.vue";
+import ProfileEx2 from "@/view/ProfileEx2.vue";
+import ProfileEx3 from "@/view/ProfileEx3.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -51,7 +54,25 @@ const router = createRouter({
       name: "search",
       component: SearchView,
       meta: { search: true, loggedIn: true },
-    }
+    },
+    {
+      path: "/profile/1",
+      name: "profile1",
+      component: ProfileEx1,
+      meta: { search: true, loggedIn: true },
+    },
+    {
+      path: "/profile/2",
+      name: "profile2",
+      component: ProfileEx2,
+      meta: { search: true, loggedIn: true },
+    },
+    {
+      path: "/profile/3",
+      name: "profile3",
+      component: ProfileEx3,
+      meta: { search: true, loggedIn: true },
+    },
   ],
 })
 
