@@ -8,12 +8,10 @@
 
 <template>
   <div class="dark:bg-[#121422]">
-    <template v-if="!route.meta.search">
-        <PageHeader :search="false"/>
-    </template>
-    <template v-else>
-		<PageHeader/>
-	</template>
+    <PageHeader
+        :search="route.meta.search"
+        :logged-in="route.meta.loggedIn"
+    />
     <RouterView />
     <FooterComponent/>
   </div>

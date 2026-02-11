@@ -5,6 +5,7 @@ import ListingView from '../view/ListingView.vue'
 import ProfileView from '../view/ProfileView.vue'
 import ReviewsView from '../view/ReviewsView.vue'
 import SearchView from '../view/SearchView.vue'
+import LoginView from "@/view/LoginView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,37 +14,43 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: LandingView,
-      meta: {search: false},
+      meta: { search: false, loggedIn: true },
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: LoginView,
+      meta: { search: false, loggedIn: false },
     },
     {
       path: "/playground",
       name: "playground",
       component: PlaygroundView,
-      meta: {search: true},
+      meta: { search: true, loggedIn: true },
     },
     {
       path: "/listing",
       name: "listing",
       component: ListingView,
-      meta: {search: true},
+      meta: { search: true, loggedIn: true },
     },
     {
       path: "/profile",
       name: "profile",
       component: ProfileView,
-      meta: {search: true},
+      meta: { search: true, loggedIn: true },
     },
     {
       path: "/reviews",
       name: "reviews",
       component: ReviewsView,
-      meta: {search: true},
+      meta: { search: true, loggedIn: true },
     },
     {
       path: "/search",
       name: "search",
       component: SearchView,
-      meta: {search: true},
+      meta: { search: true, loggedIn: true },
     }
   ],
 })
