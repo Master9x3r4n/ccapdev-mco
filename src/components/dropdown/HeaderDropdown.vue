@@ -74,6 +74,8 @@ const props = defineProps({
 					</svg>
 					<span class="text-[20px]">Settings</span>
 				</a>
+				<!-- Divider -->
+				<div class="w-full h-[2px] bg-[#C5C5C5] dark:bg-[#3C4583] mx-auto my-2 transition-colors duration-200"></div>
 
 				<div class="w-full"><DarkModeSlider/></div>
 
