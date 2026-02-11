@@ -39,7 +39,6 @@ const clearSearch = () => {
 </script>
 
 <template>
-  <div class="p-8 w-full mx-auto flex justify-center">
 
     <div
         :class="[
@@ -80,7 +79,6 @@ const clearSearch = () => {
         <SearchIcon />
       </button>
     </div>
-  </div>
 </template>
 
 <script>
