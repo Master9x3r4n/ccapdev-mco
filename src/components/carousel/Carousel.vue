@@ -33,7 +33,7 @@ const updateDimensions = () => {
 
   if (firstItem) {
     const itemWidth = firstItem.offsetWidth;
-    // This is the magic: Constrain the width to (Card Width * Count)
+    // Constrain the width to (Card Width * Count)
     // But CSS 'w-full' ensures it never exceeds the screen size.
     containerMaxWidth.value = `${itemWidth * props.count}px`;
 
@@ -127,9 +127,7 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
-/* Important: Forces items to keep their width.
-   Without this, flexbox squishes them to fit the container, breaking the layout.
-*/
+/* Force Items to keep its original width */
 :deep(.flex > *) {
   flex-shrink: 0;
   scroll-snap-align: start;
