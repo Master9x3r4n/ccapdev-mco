@@ -1,15 +1,14 @@
 <script setup>
-// Assuming you have imported your ProfileIcon component
 import ProfileIcon from './ProfileIcon.vue'
 
 const props = defineProps({
   name: {
     type: String,
-    default: 'Charlestrom Kirkland'
+    default: 'User'
   },
   username: {
     type: String,
-    default: '@number1masterdebater'
+    default: '@username'
   },
   joinDate: {
     type: String,
