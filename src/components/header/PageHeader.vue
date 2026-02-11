@@ -3,7 +3,7 @@ import SearchBar from "@/components/header/SearchBar.vue";
 import Logo from "@/components/header/Logo.vue";
 import ProfileIcon from "@/components/profile/ProfileIcon.vue";
 import DarkModeSlider from "../darkmode/DarkModeSlider.vue";
-import ProfileDropdown from "@/components/dropdown/ProfileDropdown.vue";
+import HeaderDropdown from "@/components/dropdown/HeaderDropdown.vue";
 
 const props = defineProps({
   search: {
@@ -58,11 +58,11 @@ const props = defineProps({
       </div>
 
       <!-- LOGGED IN STATE -->
-      <ProfileDropdown v-else :profileImg="profileImg" :profileAlt="profileAlt" :username="username">
+      <HeaderDropdown v-else :profileImg="profileImg" :profileAlt="profileAlt" :username="username">
 				<button class="rounded-full transition-all duration-200 hover:scale-105 hover:bg-accent">
 					<ProfileIcon :src="profileImg" :alt="profileAlt" />
 				</button>
-			</ProfileDropdown>
+			</HeaderDropdown>
     </div>
   </header>
 </template>
