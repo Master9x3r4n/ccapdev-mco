@@ -28,7 +28,7 @@ const props = defineProps({
 <template>
   <header class="sticky top-0 z-50 flex h-[76px] w-full items-center bg-white dark:bg-[#111111] px-4 py-3 shadow-md justify-between transition-colors duration-200">
     <Logo />
-    <div :class="[{'invisible': !props.search}, 'w-full']">
+    <div :class="[{'invisible': !props.search}, 'w-full flex justify-center']">
       <SearchBar />
     </div>
     <Dropdown>
@@ -57,7 +57,7 @@ const props = defineProps({
             </div>
           </div>
 
-          <div class="w-[229px] h-[2px] bg-[#BFBFBF] dark:bg-gray-700 mx-auto my-2 transition-colors duration-200"></div>
+          <div class="w-full h-[2px] bg-[#C5C5C5] dark:bg-[#3C4583] mx-auto my-2 transition-colors duration-200"></div>
 
           <a class="flex flex-row items-center w-[231px] gap-[10px] p-2 -ml-2 rounded-md
           text-gray-900 dark:text-white
@@ -87,7 +87,7 @@ const props = defineProps({
 
           <div class="w-full"><DarkModeSlider/></div>
 
-          <div class="w-[229px] h-[2px] bg-[#BFBFBF] dark:bg-gray-700 mx-auto my-2 transition-colors duration-200"></div>
+          <div class="w-full h-[2px] bg-[#C5C5C5] dark:bg-[#3C4583] mx-auto my-2 transition-colors duration-200"></div>
 
           <a class="flex flex-row items-center w-[231px] gap-[10px] p-2 -ml-2 rounded-md
           text-gray-900 dark:text-white
