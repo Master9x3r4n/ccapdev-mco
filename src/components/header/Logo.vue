@@ -10,7 +10,7 @@
       </svg>
     </div>
     <div class="flex items-center justify-center h-9 font-medium text-[20px] text-[#355AFF] dark:text-white whitespace-nowrap pl-1">
-      Fantastic Dorms
+      <RouterLink to="/">Fantastic Dorms</RouterLink>
     </div>
   </div>
 </template>
