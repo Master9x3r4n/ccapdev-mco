@@ -5,6 +5,7 @@ import OverallRating from '@/components/side-cards/OverallRating.vue';
 import MediaContainer from '@/components/carousel/MediaContainer.vue';
 import ReviewCard from '@/components/review-cards/ReviewCard.vue';
 import Divider from '@/components/divider/Divider.vue';
+import ReviewDropdown from "@/components/dropdown/ReviewDropdown.vue";
 
 
 </script>
@@ -38,8 +39,9 @@ import Divider from '@/components/divider/Divider.vue';
 
             <!-- Reviews List -->
             <div class="flex flex-col gap-1">
-                <div class="font-bold text-3xl leading-10">
-                    Reviews
+                <div class="flex flex-row justify-between items-center gap-2">
+                    <span class="font-bold text-3xl leading-10">Reviews</span>
+                  <ReviewDropdown></ReviewDropdown>
                 </div>
 
                 <!-- Reviews -->

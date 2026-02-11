@@ -1,9 +1,15 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
+const props = defineProps({
+  width: {
+    type: String,
+    default: "311px"
+  }
+})
+
 const isOpen = ref(false)
 const dropdownRef = ref(null)
-dropdownRef.value = undefined;
 
 // Toggle open/close
 const toggle = () => {
@@ -35,6 +41,7 @@ onUnmounted(() => {
   document.removeEventListener('keydown', handleKey)
 })
 </script>
+
 <template>
   <div class="relative inline-block text-left" ref="dropdownRef">
 
@@ -53,11 +60,12 @@ onUnmounted(() => {
       <div
           v-show="isOpen"
           class="absolute right-0 top-full z-50 mt-2
-                 w-[311px] h-fit
+                 h-fit w-screen
                  flex flex-col justify-center items-center p-8 gap-5
-                 origin-top-right  focus:outline-none rounded-[40px]
-                 bg-white shadow-lg border border-gray-300 
-                  dark:bg-[#111111] dark:border-[#111111]"
+                 origin-top-right focus:outline-none rounded-[40px]
+                 bg-white shadow-lg border border-gray-300
+                 dark:bg-[#111111] dark:border-[#111111]"
+          :style="{ maxWidth: width }"
       >
         <div class="py-1 w-full">
           <slot name="content"></slot>
