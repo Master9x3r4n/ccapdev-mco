@@ -22,18 +22,18 @@ import BlueButton from "@/components/page-buttons/BlueButton.vue";
 
 					<!-- Input Container -->
 					<div class="box-border flex flex-col items-start p-[40px] w-full h-[469px] bg-[#EAEAEA] rounded-[20px] self-stretch">
-      											<textarea
-																class="w-full h-full bg-transparent border-none outline-none resize-none italic font-normal text-[16px] leading-[19px] text-[#676767] placeholder-[#676767]"
-																placeholder="Start writing..."
-														></textarea>
+						<textarea
+								class="w-full h-full bg-transparent border-none outline-none resize-none italic font-normal text-[16px] leading-[19px] text-[#676767] placeholder-[#676767]"
+								placeholder="Start writing..."
+						></textarea>
 					</div>
 					<div class="flex flex-row items-end gap-[20px]">
 						<!-- Upload Media Button -->
 						<BlueButton>
 							<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="16px" fill="#FFFF"><path d="M431-342.78v-305.83L330.52-547.56l-69.65-68.53L480-835.22l219.13 219.13-69.65 68.53L529-648.61v305.83h-98Zm-160.5 170q-41.02 0-69.37-28.5t-28.35-69.5v-72h98v72h418.44v-72h98v72q0 41-28.51 69.5t-69.53 28.5H270.5Z"/></svg>
 							<span class="font-semibold text-[16px] leading-[19px] text-white">
-															Upload
-															</span>
+								Upload
+							</span>
 						</BlueButton>
 
 						<!-- Submit Button -->
