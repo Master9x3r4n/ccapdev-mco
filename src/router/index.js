@@ -56,19 +56,19 @@ const router = createRouter({
       meta: { search: true, loggedIn: true },
     },
     {
-      path: "/profile/1",
+      path: "/profile1",
       name: "profile1",
       component: ProfileEx1,
       meta: { search: true, loggedIn: true },
     },
     {
-      path: "/profile/2",
+      path: "/profile2",
       name: "profile2",
       component: ProfileEx2,
       meta: { search: true, loggedIn: true },
     },
     {
-      path: "/profile/3",
+      path: "/profile3",
       name: "profile3",
       component: ProfileEx3,
       meta: { search: true, loggedIn: true },
