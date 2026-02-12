@@ -82,7 +82,7 @@ const homeTypes = [
 	<div class="w-full h-fit flex flex-col gap-10 justify-start px-12 pb-4">
 		<!-- First Category -->
 		<LandingCategory :filterItems="universityFilters" :cardResults="props.searchResults"/>
-
+ 
 		<!-- Second Category -->
 		<LandingCategory :filterItems="homeTypes" :cardResults="props.searchResults">
 			<template #text>

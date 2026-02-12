@@ -16,25 +16,28 @@ const listingData = {
         { name: "Spaciousness", rating: 1 },
         { name: "Price", rating: 1 }
     ],
+    imageSrc: "https://static.wikitide.net/peppafanonwiki/thumb/e/ee/Peppa%27s_house_updated.webp/800px-Peppa%27s_house_updated.webp.png",
 }
 
 const reviewsData = [
     {
         authorData: {
             name: "Jordan Lee",
-            reviewCount: 2
+            reviewCount: 2,
+            imageSrc: "https://i.pinimg.com/1200x/40/71/e3/4071e33ef6d3d34178fac2a3e11e358b.jpg",
         },
         rating: 2,
         reviewTitle: "Cool ig",
         reviewContent: "Honestly, not too bad, but just very mid. giving it 2 stars instead of 3 cause I didn't get to see Miro.",
-        reply: "",
+        reply: "", 
         score: 7,
         reviewsRoute: "/reviews3",
     },
     {
         authorData: {
             name: "Casey Cruz",
-            reviewCount: 3
+            reviewCount: 3,
+            imageSrc: "https://i.pinimg.com/736x/07/ad/21/07ad218a0a5df57b1cf0458c7febd2e3.jpg",
         },
         rating: 1,
         reviewTitle: "Very very meh",

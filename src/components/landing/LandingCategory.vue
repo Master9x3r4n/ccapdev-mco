@@ -24,7 +24,8 @@ const props = defineProps({
             ratingData: {
                 rating: 4,
                 reviewCount: 32
-            }
+            },
+            imageSrc: "",
         }]
     }
 })

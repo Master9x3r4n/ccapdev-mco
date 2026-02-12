@@ -29,7 +29,7 @@ const props = defineProps({
         "w-full h-5/12 rounded-t-[25px] 
         absolute left-0 right-0 top-0
         bg-gradient">
-            <img v-if="props.imageSrc" :src="props.imageSrc" class="w-full h-5/12 rounded-t-[25px]">
+            <img v-if="cardData.imageSrc" :src="cardData.imageSrc" class="w-full h-full rounded-t-[25px]">
         </div>
 
         <!-- Frame -->

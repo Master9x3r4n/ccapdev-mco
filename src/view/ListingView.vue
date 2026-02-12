@@ -23,7 +23,8 @@ const props = defineProps({
                 { name: "Comfort", rating: 4 },
                 { name: "Spaciousness", rating: 3 },
                 { name: "Price", rating: 2 }
-            ]
+            ],
+            imageSrc: "",
         }
     },
     reviewsData: {
@@ -32,7 +33,8 @@ const props = defineProps({
             {
                 authorData: {
                     name: "chud student 1",
-                    reviewCount: 67
+                    reviewCount: 67,
+                    imageSrc: "",
                 },
                 rating: 4,
                 reviewTitle: "Review Name 1",
@@ -44,7 +46,8 @@ const props = defineProps({
             {
                 authorData: {
                     name: "chud student 2",
-                    reviewCount: 67
+                    reviewCount: 67,
+                    imageSrc: "",
                 },
                 rating: 4,
                 reviewTitle: "Review Name 2",
@@ -66,9 +69,7 @@ const props = defineProps({
             <!-- Media Carousel -->
             <Carousel :count="1" buttonStyling="large">
                 <template #content>
-                <template v-for="i in 3">
-                    <MediaContainer class="flex shrink-0 snap-start"/>
-                </template>
+                <MediaContainer class="flex shrink-0 snap-start" :src="props.listingData.imageSrc"/>
                 </template>
             </Carousel>
 
@@ -96,7 +97,7 @@ const props = defineProps({
             <!-- Reviews List -->
             <div class="flex flex-col gap-1">
                 <div class="flex flex-row justify-between items-center gap-2">
-                    <span class="font-bold text-3xl leading-10">Reviews</span>
+                    <span class="font-bold text-3xl leading-10 dark:text-white">Reviews</span>
                   <ReviewDropdown></ReviewDropdown>
                 </div>
 

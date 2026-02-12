@@ -8,7 +8,8 @@ const props = defineProps({
         default: {
             authorData: {
                 name: "chud student 1",
-                reviewCount: 67
+                reviewCount: 67,
+                imageSrc: "",
             },
             rating: 4,
             score: 0,
@@ -26,7 +27,10 @@ const props = defineProps({
         <div class="w-full flex justify-between items-center">
             <div class="flex gap-3 items-center">
                 <!-- Profile -->
-                <div class="w-13 h-13 rounded-[50%] bg-amber-100 bg-gradient"></div>
+                <div class="w-13 h-13 rounded-[50%] bg-amber-100 bg-gradient">
+                    <img :src="reviewData.authorData.imageSrc" width="52px" class="w-13 h-13 rounded-[50%]" 
+                    v-if="reviewData.authorData.imageSrc">
+                </div>
 
                 <!-- Name -->
                 <div>
