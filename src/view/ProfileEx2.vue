@@ -30,7 +30,7 @@ const props = defineProps({
 </script>
 
 <template>
-	<ProfileView :profile="profile" :reviews="reviews" />
+	<ProfileView :profile="profile" :reviews="reviews" /> 
 </template>
 
 <style scoped>

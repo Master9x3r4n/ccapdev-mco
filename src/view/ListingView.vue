@@ -89,7 +89,7 @@ const props = defineProps({
 
         <!-- Reviews -->
         <div class="flex flex-col gap-4 w-fit">
-            <OverallRating/>
+            <OverallRating :ratings="props.listingData.rating"/>
 
             <!-- Reviews List -->
             <div class="flex flex-col gap-1">

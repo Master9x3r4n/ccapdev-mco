@@ -32,7 +32,7 @@ const props = defineProps({
 });
 </script>
 
-<template>
+<template> 
 	<ProfileView :profile="profile" :reviews="reviews" />
 </template>
 

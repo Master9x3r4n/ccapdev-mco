@@ -5,7 +5,7 @@ import ListingView from '../ListingView.vue';
 
 const listingData = {
     name: "Grand Apartment",
-    address: "44 Yancy St., New York City, Earth-616",
+    address: "Blk 12 Lt 32 Somebody st., Las Pinas City",
     description: "A very grand, beautiful, and luxurious apartment that features multiple rooms and doors. A must stay for the holidays.",
     owner: "The Daily Bugle",
     amenities: ['2 Bedrooms', '1 Bathroom', 'Air Conditioning'],
@@ -21,24 +21,24 @@ const listingData = {
 const reviewsData = [
     {
         authorData: {
-            name: "Peter Parker",
-            reviewCount: 67
+            name: "Casey Cruz",
+            reviewCount: 2
         },
-        rating: 4,
-        reviewTitle: "Review Name 1",
-        reviewContent: "I have stayed at this apartment for a while, and let me say, it is as the name says. It's a really cool apartment and it has a lot of the amenities that a student would want from...",
+        rating: 4.5,
+        reviewTitle: 'Le Grand Apartment',
+        reviewContent: "One of my favorite places ever. I am glad that i decided to visit this place.",
         reply: "Glad to hear that you were satisfied with our space! ^_^",
         score: 67
     },
     {
         authorData: {
-            name: "chud student 2",
-            reviewCount: 67
+            name: "Jordan Lee",
+            reviewCount: 2
         },
-        rating: 4,
-        reviewTitle: "Review Name 2",
-        reviewContent: "I have stayed at this apartment for a while, and let me say, it is as the name says. It's a really cool apartment and it has a lot of the amenities that a student would want from...",
-        ownerReply: "Glad to hear that you were satisfied with our space! ^_^",
+        rating: 5,
+        reviewTitle: "My review",
+        reviewContent: "Absolutely Grand! That is all I have to say for this wonderful place.",
+        ownerReply: "",
         score: 52
     }
 ]

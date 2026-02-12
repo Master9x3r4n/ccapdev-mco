@@ -16,7 +16,8 @@ const props = defineProps({
                 rating: 4.5,
                 reviewCount: 124,
             },
-            imageSrc: "https://youre.outof.games/media/uploads/cb/da/cbda1bb4-ee0d-4c65-989f-05a24edd22cf/daily-bugle-featured-location.jpg"
+            imageSrc: "https://youre.outof.games/media/uploads/cb/da/cbda1bb4-ee0d-4c65-989f-05a24edd22cf/daily-bugle-featured-location.jpg",
+            routerLink: "/listing1",
         },
         {
             name: "The Baxter Suite",
@@ -25,7 +26,8 @@ const props = defineProps({
                 rating: 4,
                 reviewCount: 44,
             },
-            imageSrc: "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/rsz-baxter-buildingv1.jpg"
+            imageSrc: "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/rsz-baxter-buildingv1.jpg",
+            routerLink: "/listing2",
         },
         {
             name: "Miro's House",
@@ -34,7 +36,8 @@ const props = defineProps({
                 rating: 3.5,
                 reviewCount: 67,
             },
-            imageSrc: "https://static.wikitide.net/peppafanonwiki/thumb/e/ee/Peppa%27s_house_updated.webp/800px-Peppa%27s_house_updated.webp.png"
+            imageSrc: "https://static.wikitide.net/peppafanonwiki/thumb/e/ee/Peppa%27s_house_updated.webp/800px-Peppa%27s_house_updated.webp.png",
+            routerLink: "/listing3",
         },
         ]
     }
