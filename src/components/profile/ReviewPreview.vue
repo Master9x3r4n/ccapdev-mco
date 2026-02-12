@@ -15,13 +15,17 @@ defineProps({
   rating: {
     type: String,
     default: '4.0'
-  }
+  },
+    listingRoute: {
+      type: String,
+      default: "/listing"
+    }
 })
 </script>
 
 <template>
   <div class="flex flex-row justify-between items-center w-full max-w-[580px] h-[80px] self-stretch flex-none order-1">
-
+    <RouterLink :to="listingRoute">
     <div class="flex flex-row items-center gap-[15px]">
 
       <div
@@ -39,6 +43,7 @@ defineProps({
       </div>
 
     </div>
+    </RouterLink>
 
     <div class="flex flex-row justify-center items-center gap-[10px]">
 

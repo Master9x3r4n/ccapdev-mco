@@ -8,7 +8,7 @@ const props = defineProps({
 		default: () => ({
 			name: "Jordan Lee", 
 			username: "jlee_99",
-			joinDate: "March 3rd, 2020",
+			joinDate: "March 3rd, 2020", 
 			bio: "Engineering student. Gamer. Night owl.",
 			school: "De La Salle University",
 			schoolSince: "Since 2022",
@@ -24,9 +24,11 @@ const props = defineProps({
 		type: Array,
 		default: () => [
 			{ id: 1, title: 'Grand Apartment', rating: '5.0', review: 'Absolutely Grand', 
-			img: 'https://i.pinimg.com/736x/50/d7/51/50d7511c8e4af87f12bf0f23520f319e.jpg'},
+			img: 'https://youre.outof.games/media/uploads/cb/da/cbda1bb4-ee0d-4c65-989f-05a24edd22cf/daily-bugle-featured-location.jpg',
+			listingRoute: "/listing1",},
 			{ id: 2, title: "Miro's House", rating: '2.0', review: 'cool ig', 
-			img: 'https://i.pinimg.com/1200x/c1/e5/c3/c1e5c3911e549f0bee199dbf73e98908.jpg'},
+			img: 'https://static.wikitide.net/peppafanonwiki/thumb/e/ee/Peppa%27s_house_updated.webp/800px-Peppa%27s_house_updated.webp.png',
+			listingRoute: "/listing3",},
 		]
 	}
 });

@@ -10,6 +10,7 @@ const props = defineProps({
                 name: "chud student 1",
                 reviewCount: 67,
                 imageSrc: "",
+                profileRoute: "/profile",
             },
             rating: 4,
             score: 0,
@@ -25,19 +26,21 @@ const props = defineProps({
     p-2 pb-4 gap-4.5 w-105.25 h-fit bg-white dark:bg-[#121422] dark:text-white">
         <!-- Header Container -->
         <div class="w-full flex justify-between items-center">
+            <RouterLink :to="reviewData.authorData.profileRoute">
             <div class="flex gap-3 items-center">
                 <!-- Profile -->
                 <div class="w-13 h-13 rounded-[50%] bg-amber-100 bg-gradient">
                     <img :src="reviewData.authorData.imageSrc" width="52px" class="w-13 h-13 rounded-[50%]" 
                     v-if="reviewData.authorData.imageSrc">
                 </div>
-
+                
                 <!-- Name -->
                 <div>
                     <div class="font-medium text-[20px] leading-6">{{ props.reviewData.authorData.name }}</div>
                     <div class="font-normal leading-5 italic">{{ props.reviewData.authorData.reviewCount }} Reviews</div>
                 </div>
             </div>
+            </RouterLink>
 
             <!-- Rating -->
             <div class="flex justify-between items-center w-3/12 px-2">

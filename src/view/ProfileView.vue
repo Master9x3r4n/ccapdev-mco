@@ -27,11 +27,8 @@ const props = defineProps({
 	reviews: {
 		type: Array,
 		default: () => [
-			{ id: 1, title: 'Apartment 1', rating: '5.0', review: 'fantastic', img: ''},
-			{ id: 2, title: 'Apartment 2', rating: '3.5', review: 'fantastic', img: ''},
-			{ id: 3, title: 'Apartment 3', rating: '2.0', review: 'fantastic', img: ''},
-			{ id: 4, title: 'Apartment 4', rating: '4.5', review: 'fantastic', img: ''},
-			{ id: 5, title: 'Apartment 5', rating: '5.0', review: 'fantastic', img: ''},
+			{ id: 1, title: 'Apartment 1', rating: '5.0', review: 'fantastic', img: '',
+			listingRoute: "/listing",},
 		]
 	}
 });
@@ -153,6 +150,7 @@ defineEmits(['edit']);
 							:rating="review.rating"
 							:review="review.review"
 							:img="review.img"
+							:listingRoute="review.listingRoute"
 					/>
 				</div>
 
