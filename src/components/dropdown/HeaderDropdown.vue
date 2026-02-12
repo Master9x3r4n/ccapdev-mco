@@ -74,6 +74,7 @@ const props = defineProps({
 					</svg>
 					<span class="text-[20px]">Settings</span>
 				</a>
+				
 				<!-- Divider -->
 				<div class="w-full h-[2px] bg-[#C5C5C5] dark:bg-[#3C4583] mx-auto my-2 transition-colors duration-200"></div>
 
@@ -83,6 +84,7 @@ const props = defineProps({
 				<div class="w-full h-[2px] bg-[#C5C5C5] dark:bg-[#3C4583] mx-auto my-2 transition-colors duration-200"></div>
 
 				<!-- Sign Out -->
+				<RouterLink to="/login">
 				<a class="flex flex-row items-center w-[231px] gap-[10px] p-2 -ml-2 rounded-md
             text-gray-900 dark:text-white
             hover:bg-gray-100 dark:hover:bg-[#1E1E1E] hover:text-[#355AFF] dark:hover:text-[#355AFF]
@@ -92,6 +94,7 @@ const props = defineProps({
 					</svg>
 					<span class="text-[20px]">Sign out</span>
 				</a>
+				</RouterLink>
 
 			</div>
 		</template>
