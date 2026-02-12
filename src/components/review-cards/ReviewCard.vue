@@ -11,9 +11,10 @@ const props = defineProps({
                 reviewCount: 67
             },
             rating: 4,
-            score: 0
+            score: 0,
+            reviewsRoute: "/reviews"
         }
-    }
+    },
 })
 
 </script>
@@ -88,7 +89,7 @@ const props = defineProps({
         <div class="w-full h-[16%] flex justify-between items-center mt-1">
             <!-- Show More -->
             <div class="font-semibold underline text-[16px] leading-6">
-                <RouterLink to="/reviews">Show More</RouterLink>
+                <RouterLink :to="props.reviewData.reviewsRoute">Show More</RouterLink>
             </div>
 
             <!-- Upvote -->

@@ -38,7 +38,8 @@ const props = defineProps({
                 reviewTitle: "Review Name 1",
                 reviewContent: "I have stayed at this apartment for a while, and let me say, it is as the name says. It's a really cool apartment and it has a lot of the amenities that a student would want from...",
                 reply: "Glad to hear that you were satisfied with our space! ^_^",
-                score: 67
+                score: 67,
+                reviewsRoute: "/reviews1"
             },
             {
                 authorData: {
@@ -49,7 +50,8 @@ const props = defineProps({
                 reviewTitle: "Review Name 2",
                 reviewContent: "I have stayed at this apartment for a while, and let me say, it is as the name says. It's a really cool apartment and it has a lot of the amenities that a student would want from...",
                 ownerReply: "Glad to hear that you were satisfied with our space! ^_^",
-                score: 52
+                score: 52,
+                reviewsRoute: "/reviews2"
             }
         ]
     }
@@ -100,7 +102,7 @@ const props = defineProps({
 
                 <!-- Reviews -->
                 <template v-for="i in props.reviewsData">
-                    <ReviewCard :reviewData="i">
+                    <ReviewCard :reviewData="i" :reviewsRoute="i.reviewsRoute">
                         <template #review-title>
                             {{ i.reviewTitle }}
                         </template>
@@ -109,7 +111,7 @@ const props = defineProps({
                         </template>
                         <template #ownerReply v-if="i.ownerReply">
                             {{ i.ownerReply }}
-                        </template>
+                        </template> 
                     </ReviewCard>
                     <Divider/>
                 </template>

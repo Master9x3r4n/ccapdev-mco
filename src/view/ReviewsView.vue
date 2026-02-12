@@ -1,7 +1,7 @@
 <script setup>
 import Divider from '@/components/divider/Divider.vue';
 import FullReviewCard from '@/components/review-cards/FullReviewCard.vue';
-
+ 
 const props = defineProps({
     reviews: {
         type: Array,

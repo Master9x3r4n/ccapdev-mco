@@ -15,7 +15,7 @@ const listingData = {
         { name: "Comfort", rating: 4 },
         { name: "Spaciousness", rating: 3 },
         { name: "Price", rating: 2 }
-    ]
+    ],
 }
 
 const reviewsData = [
@@ -28,10 +28,11 @@ const reviewsData = [
         reviewTitle: 'Le Grand Apartment',
         reviewContent: "One of my favorite places ever. I am glad that i decided to visit this place.",
         reply: "Glad to hear that you were satisfied with our space! ^_^",
-        score: 67
+        score: 67,
+        reviewsRoute: "/reviews1",
     },
     {
-        authorData: {
+        authorData: { 
             name: "Jordan Lee",
             reviewCount: 2
         },
@@ -39,7 +40,8 @@ const reviewsData = [
         reviewTitle: "My review",
         reviewContent: "Absolutely Grand! That is all I have to say for this wonderful place.",
         ownerReply: "",
-        score: 52
+        score: 52,
+        reviewsRoute: "/reviews1",
     }
 ]
 

@@ -15,7 +15,7 @@ const listingData = {
         { name: "Comfort", rating: 5 },
         { name: "Spaciousness", rating: 1 },
         { name: "Price", rating: 1 }
-    ]
+    ],
 }
 
 const reviewsData = [
@@ -28,7 +28,8 @@ const reviewsData = [
         reviewTitle: "Cool ig",
         reviewContent: "Honestly, not too bad, but just very mid. giving it 2 stars instead of 3 cause I didn't get to see Miro.",
         reply: "",
-        score: 7
+        score: 7,
+        reviewsRoute: "/reviews3",
     },
     {
         authorData: {
@@ -39,7 +40,8 @@ const reviewsData = [
         reviewTitle: "Very very meh",
         reviewContent: "Miro wasn't even there and the apartment doesn't match what was advertised. It is driving me insane.",
         ownerReply: "",
-        score: 5
+        score: 5,
+        reviewsRoute: "/reviews3",
     }
 ]
 
