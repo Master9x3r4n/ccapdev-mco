@@ -33,7 +33,7 @@ const reviewsData = [
         reply: "", 
         score: 7,
         reviewsRoute: "/reviews3",
-    },
+    }, 
     {
         authorData: {
             name: "Casey Cruz",

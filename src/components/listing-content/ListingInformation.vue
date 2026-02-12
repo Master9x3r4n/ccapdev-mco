@@ -64,7 +64,7 @@ const props = defineProps({
     <Divider/>
     <div class="w-full">
         <div class="sub-heading">Location</div>
-        <MediaContainer size="wide"/>
+        <MediaContainer size="wide" src="https://cdn.britannica.com/06/276306-049-A8451874/world-map.jpg"/>
     </div>
 
     <!-- Contact -->

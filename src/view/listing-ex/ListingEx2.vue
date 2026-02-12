@@ -20,7 +20,7 @@ const listingData = {
 }
 
 const reviewsData = [
-    {
+    { 
         authorData: {
             name: "Casey Cruz",
             reviewCount: 2,

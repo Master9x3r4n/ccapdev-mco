@@ -34,7 +34,7 @@ const reviewsData = [
         score: 67,
         reviewsRoute: "/reviews1",
     },
-    {
+    { 
         authorData: { 
             name: "Jordan Lee",
             reviewCount: 2,
