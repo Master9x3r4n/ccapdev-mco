@@ -47,14 +47,14 @@ const props = defineProps({
         <div class="mr-2"><DarkModeSlider /></div>
 
         <!-- Log In  -->
-        <button class="px-2 py-2.5 w-[75px] rounded-lg font-semibold text-sm text-gray-700 bg-gray-100 dark:bg-[#121212] dark:text-white hover:bg-gray-200 dark:hover:bg-[#1E1E1E] transition-all duration-200">
+        <!-- <button class="px-2 py-2.5 w-[75px] rounded-lg font-semibold text-sm text-gray-700 bg-gray-100 dark:bg-[#121212] dark:text-white hover:bg-gray-200 dark:hover:bg-[#1E1E1E] transition-all duration-200">
           Log in
-        </button>
+        </button> -->
 
         <!-- Sign Up  -->
-        <button class="px-2 py-2.5 w-[75px] rounded-lg font-semibold text-sm text-white bg-[#355AFF] hover:bg-[#2C0ED6] hover:scale-105 shadow-md shadow-[#355AFF]/20 transition-all duration-200">
+        <!-- <button class="px-2 py-2.5 w-[75px] rounded-lg font-semibold text-sm text-white bg-[#355AFF] hover:bg-[#2C0ED6] hover:scale-105 shadow-md shadow-[#355AFF]/20 transition-all duration-200">
           Sign up
-        </button>
+        </button> -->
       </div>
 
       <!-- LOGGED IN STATE -->

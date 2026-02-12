@@ -5,6 +5,7 @@ import ListingView from '../view/ListingView.vue'
 import ProfileView from '../view/ProfileView.vue'
 import ReviewsView from '../view/ReviewsView.vue'
 import SearchView from '../view/SearchView.vue'
+import RegisterView from "@/view/RegisterView.vue";
 import LoginView from "@/view/LoginView.vue";
 import ProfileEx1 from "@/view/ProfileEx1.vue";
 import ProfileEx2 from "@/view/ProfileEx2.vue";
@@ -24,6 +25,12 @@ const router = createRouter({
       path: "/login",
       name: "login",
       component: LoginView,
+      meta: { search: false, loggedIn: false },
+    },
+    {
+      path: "/register",
+      name: "register",
+      component: RegisterView,
       meta: { search: false, loggedIn: false },
     },
     {
