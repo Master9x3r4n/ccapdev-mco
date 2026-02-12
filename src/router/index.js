@@ -9,6 +9,7 @@ import LoginView from "@/view/LoginView.vue";
 import ProfileEx1 from "@/view/ProfileEx1.vue";
 import ProfileEx2 from "@/view/ProfileEx2.vue";
 import ProfileEx3 from "@/view/ProfileEx3.vue";
+import ListingEx1 from "@/view/listing-ex/ListingEx1.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -71,6 +72,12 @@ const router = createRouter({
       path: "/profile3",
       name: "profile3",
       component: ProfileEx3,
+      meta: { search: true, loggedIn: true },
+    },
+    {
+      path: "/listing1",
+      name: "listing1",
+      component: ListingEx1,
       meta: { search: true, loggedIn: true },
     },
   ],
