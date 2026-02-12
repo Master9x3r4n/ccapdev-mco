@@ -2,6 +2,20 @@
 import MediaContainer from '../carousel/MediaContainer.vue';
 import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
 
+const props = defineProps({
+    reviewData: {
+        type: Object,
+        default: {
+            authorData: {
+                name: "chud student 1",
+                reviewCount: 67
+            },
+            rating: 4,
+            score: 0
+        }
+    }
+})
+
 </script>
 
 <template>
@@ -15,15 +29,15 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
 
                 <!-- Name -->
                 <div>
-                    <div class="font-medium text-[20px] leading-6">chud student</div>
-                    <div class="font-normal leading-5 italic">67 Reviews</div>
+                    <div class="font-medium text-[20px] leading-6">{{ props.reviewData.authorData.name }}</div>
+                    <div class="font-normal leading-5 italic">{{ props.reviewData.authorData.reviewCount }} Reviews</div>
                 </div>
             </div>
 
             <!-- Rating -->
             <div class="flex justify-between items-center w-3/12 px-2">
                 <img src="@\assets\rating-assets\star-full.svg" width="28px">
-                <div class="font-bold text-3xl leading-10">4.0</div>
+                <div class="font-bold text-3xl leading-10">{{ props.reviewData.rating.toFixed(1) }}</div>
             </div>
         </div>
 
@@ -54,7 +68,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
             </div>
 
             <!-- CHANGE THIS TO CONDITIONAL SLOTTING -->
-            <template v-if="$slots.ownerReply">
+            <template v-if="$slots.ownerReply"> 
             <!-- Reply Container -->
             <div class="w-full h-[50%] mt-3">
                 <div class="bg-[#D9D9D9] dark:bg-[#111111] h-full rounded-3xl 
@@ -80,7 +94,7 @@ import ThumbsButton from '../thumbs-buttons/ThumbsButton.vue';
             <!-- Upvote -->
             <div class="italic font-normal text-[16px] leading-6 flex items-center justify-around gap-2">
                 <ThumbsButton direction="up"/>
-                <div>-69</div>
+                <div>{{ props.reviewData.score }}</div>
                 <ThumbsButton direction="down"/>
             </div>
         </div>

@@ -8,6 +8,53 @@ import Divider from '@/components/divider/Divider.vue';
 import ReviewDropdown from "@/components/dropdown/ReviewDropdown.vue";
 
 
+const props = defineProps({
+    listingData: {
+        type: Object,
+        default:{
+            name: "Apartment Name",
+            address: "Studio apartment - Awesome St., Barangay Big Love, Pasay City",
+            description: "This apartment is very nice. It has nice rooms and is placed very nicely. It also has nice neighbors and a lot of other nice things.",
+            owner: "Really Cool Apartments",
+            amenities: ['2 Bedrooms', '2 Bathrooms', '3 Dining Rooms', '10 Living Rooms'],
+            contacts: ['Facebook', 'Instagram'],
+            rating: [
+                { name: "Cleanliness", rating: 4 },
+                { name: "Comfort", rating: 4 },
+                { name: "Spaciousness", rating: 3 },
+                { name: "Price", rating: 2 }
+            ]
+        }
+    },
+    reviewsData: {
+        type: Array,
+        default: [
+            {
+                authorData: {
+                    name: "chud student 1",
+                    reviewCount: 67
+                },
+                rating: 4,
+                reviewTitle: "Review Name 1",
+                reviewContent: "I have stayed at this apartment for a while, and let me say, it is as the name says. It's a really cool apartment and it has a lot of the amenities that a student would want from...",
+                reply: "Glad to hear that you were satisfied with our space! ^_^",
+                score: 67
+            },
+            {
+                authorData: {
+                    name: "chud student 2",
+                    reviewCount: 67
+                },
+                rating: 4,
+                reviewTitle: "Review Name 2",
+                reviewContent: "I have stayed at this apartment for a while, and let me say, it is as the name says. It's a really cool apartment and it has a lot of the amenities that a student would want from...",
+                ownerReply: "Glad to hear that you were satisfied with our space! ^_^",
+                score: 52
+            }
+        ]
+    }
+})
+
 </script>
 
 <template>
@@ -25,12 +72,19 @@ import ReviewDropdown from "@/components/dropdown/ReviewDropdown.vue";
 
             <!-- Listing Information -->
             <ListingInformation>
-                <template #description>
-                    This apartment is very nice. It has nice rooms and is placed very nicely.
-                    <br><br>
-                    It also has nice neighbors and a lot of other nice things.
+                <template #listing-name>
+                    {{ props.listingData.name }}
                 </template>
-            </ListingInformation>
+                <template #listing-address>
+                    {{ props.listingData.address }}
+                </template>
+                <template #listing-owner>
+                    {{ props.listingData.owner }}
+                </template>
+                <template #description> 
+                    {{ props.listingData.description }}
+                </template>
+            </ListingInformation> 
         </div>
 
         <!-- Reviews -->
@@ -45,17 +99,20 @@ import ReviewDropdown from "@/components/dropdown/ReviewDropdown.vue";
                 </div>
 
                 <!-- Reviews -->
-                <ReviewCard>
-                    <template #ownerReply>
-                        Glad to hear that you were satisfied with our space! ^_^
-                    </template>
-                </ReviewCard>
-                <Divider/>
-                <ReviewCard>
-                    <template #ownerReply>
-                        Glad to hear that you were satisfied with our space! ^_^
-                    </template>
-                </ReviewCard>
+                <template v-for="i in props.reviewsData">
+                    <ReviewCard :reviewData="i">
+                        <template #review-title>
+                            {{ i.reviewTitle }}
+                        </template>
+                        <template #review>
+                            {{ i.reviewContent }}
+                        </template>
+                        <template #ownerReply v-if="i.ownerReply">
+                            {{ i.ownerReply }}
+                        </template>
+                    </ReviewCard>
+                    <Divider/>
+                </template>
             </div>
         </div>
     </div>

@@ -2,6 +2,19 @@
 import MediaContainer from '../carousel/MediaContainer.vue';
 import Divider from '../divider/Divider.vue';
 
+const props = defineProps({
+    listingData: {
+        type: Object,
+        default: {
+            amenities: ['2 Bedrooms', '2 Bathrooms', '3 Dining Rooms', '10 Living Rooms'],
+            contacts: ['Facebook', 'Instagram']
+        }
+    },
+    reviewsData: {
+        type: Array
+    }
+})
+
 </script>
 
 <template>
@@ -16,13 +29,15 @@ import Divider from '../divider/Divider.vue';
             <div class="italic flex items-center">
                 <slot name="listing-address">Studio apartment - Awesome St., Barangay Big Love, Pasay City</slot>
             </div>
-        </div>
+        </div> 
 
         <!-- Profile -->
         <div class="flex gap-3">
             <div class="w-13 h-13 rounded-[50%] bg-amber-100 bg-gradient"></div>
             <div>
-                <div class="font-medium text-[20px] leading-6">Really Cool Apartments</div>
+                <div class="font-medium text-[20px] leading-6">
+                    <slot name="listing-owner">Really Cool Apartments</slot>
+                </div>
                 <div class="font-normal leading-5 italic text-[#355AFF]">✅ Verified</div>
             </div>
         </div>
@@ -41,7 +56,7 @@ import Divider from '../divider/Divider.vue';
     <div class="flex flex-col h-fit max-h-54 w-full">
         <div class="sub-heading">Amenities</div>
         <ul class="flex flex-col flex-wrap gap-4 h-[70%]">
-             <li v-for="i in ['2 Bedrooms', '2 Bathrooms', '3 Dining Rooms', '10 Living Rooms']">ℹ️ {{ i }}</li>
+             <li v-for="i in props.listingData.amenities">ℹ️ {{ i }}</li>
         </ul>
     </div>
 
@@ -58,7 +73,7 @@ import Divider from '../divider/Divider.vue';
         <div class="sub-heading">Contact</div>
         <div>
             <ul class="flex flex-col gap-4">
-                <li v-for="i in ['Facebook', 'Instagram']">
+                <li v-for="i in props.listingData.contacts">
                     ℹ️ {{ i }}
                 </li>
             </ul>
