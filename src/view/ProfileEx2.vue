@@ -6,7 +6,7 @@ const props = defineProps({
 	profile: {
 		type: Object,
 		default: () => ({
-			name: "Taylor Morgan",
+			name: "Taylor Morgan", 
 			username: "tmorgan_med",
 			joinDate: "March 2nd, 2020",
 			bio: "Med student. Need absolute silence for studying.",
@@ -22,7 +22,8 @@ const props = defineProps({
 	reviews: {
 		type: Array,
 		default: () => [
-			{ id: 1, title: 'Metro Haven Suites', rating: '4.5', review: 'fantasticish', img: 'https://i.pinimg.com/736x/9f/6a/7c/9f6a7c1b0383d3c5bfaa50372f08c4ed.jpg'},
+			{ id: 1, title: 'The Baxter Suite', rating: '4.5', review: 'fantasticish', 
+			img: 'https://i.pinimg.com/736x/9f/6a/7c/9f6a7c1b0383d3c5bfaa50372f08c4ed.jpg'},
 		]
 	}
 });

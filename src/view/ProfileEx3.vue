@@ -6,7 +6,7 @@ const props = defineProps({
 	profile: {
 		type: Object,
 		default: () => ({
-			name: "Jordan Lee",
+			name: "Jordan Lee", 
 			username: "jlee_99",
 			joinDate: "March 3rd, 2020",
 			bio: "Engineering student. Gamer. Night owl.",
@@ -23,8 +23,10 @@ const props = defineProps({
 	reviews: {
 		type: Array,
 		default: () => [
-			{ id: 1, title: 'Urban Hive Lofts', rating: '5.0', review: 'fantastic', img: 'https://i.pinimg.com/736x/50/d7/51/50d7511c8e4af87f12bf0f23520f319e.jpg'},
-			{ id: 2, title: "The Scholar's Den", rating: '4.0', review: 'somewhat fantastic', img: 'https://i.pinimg.com/1200x/c1/e5/c3/c1e5c3911e549f0bee199dbf73e98908.jpg'},
+			{ id: 1, title: 'Grand Apartment', rating: '5.0', review: 'Absolutely Grand', 
+			img: 'https://i.pinimg.com/736x/50/d7/51/50d7511c8e4af87f12bf0f23520f319e.jpg'},
+			{ id: 2, title: "Miro's House", rating: '2.0', review: 'cool ig', 
+			img: 'https://i.pinimg.com/1200x/c1/e5/c3/c1e5c3911e549f0bee199dbf73e98908.jpg'},
 		]
 	}
 });

@@ -21,9 +21,12 @@ const props = defineProps({
 	reviews: {
 		type: Array,
 		default: () => [
-			{ id: 1, title: 'Urban Hive Lofts', rating: '3.0', review: 'midtastic', img: 'https://i.pinimg.com/736x/50/d7/51/50d7511c8e4af87f12bf0f23520f319e.jpg'},
-			{ id: 2, title: "The Scholar's Den", rating: '2.0', review: 'mehtastic', img: 'https://i.pinimg.com/1200x/c1/e5/c3/c1e5c3911e549f0bee199dbf73e98908.jpg'},
-			{ id: 3, title: 'Metro Haven Suites', rating: '5.0', review: 'fantastic', img: 'https://i.pinimg.com/736x/9f/6a/7c/9f6a7c1b0383d3c5bfaa50372f08c4ed.jpg'},
+			{ id: 1, title: 'Grand Apartment', rating: '3.0', review: 'One of my favorite places ever', 
+			img: 'https://i.pinimg.com/736x/50/d7/51/50d7511c8e4af87f12bf0f23520f319e.jpg'},
+			{ id: 2, title: "The Baxter Suite", rating: '2.0', review: 'Very Fantastic for us to live in.', 
+			img: 'https://i.pinimg.com/1200x/c1/e5/c3/c1e5c3911e549f0bee199dbf73e98908.jpg'},
+			{ id: 3, title: 'Miro\'s House', rating: '5.0', review: 'meh', 
+			img: 'https://i.pinimg.com/736x/9f/6a/7c/9f6a7c1b0383d3c5bfaa50372f08c4ed.jpg'},
 		]
 	}
 });
