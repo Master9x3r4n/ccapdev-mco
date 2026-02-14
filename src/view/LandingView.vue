@@ -21,7 +21,7 @@ const props = defineProps({
             description: "Inspired by the heroes of the Fantastic Four, this beautiful deluxe suite features 4 bedrooms and a visit from Galactus. It's Fantastic.",
             ratingData: {
                 rating: 4,
-                reviewCount: 44,
+                reviewCount: 44, 
             },
 			routerLink: "/listing2",
             imageSrc: "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/rsz-baxter-buildingv1.jpg"

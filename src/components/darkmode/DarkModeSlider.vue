@@ -5,7 +5,7 @@
 	const theme = {
 		"light": {
 			"src": "src/assets/darkmode-assets/sun-svgrepo-com.svg",
-			"alt": "Light Mode Icon"
+			"alt": "Light Mode Icon" 
 		},
 		"dark": {
 			"src": "src/assets/darkmode-assets/moon-svgrepo-com.svg",
