@@ -1,6 +1,6 @@
 <script setup>
   import {RouterView, useRoute} from "vue-router";
-  import FooterComponent from "./components/footer/FooterComponent.vue";
+  import PageFooter from "./components/footer/PageFooter.vue";
   import PageHeader from "@/components/header/PageHeader.vue";
 
   const route = useRoute();
@@ -13,7 +13,7 @@
         :logged-in="route.meta.loggedIn"
     />
     <RouterView />
-    <FooterComponent/>
+    <PageFooter/>
   </div>
 </template>
 
