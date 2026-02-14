@@ -29,29 +29,29 @@ const props = defineProps({
 			<div class="flex flex-col justify-between items-center gap-2">
 
 				<!-- Profile Info -->
-				<div class="flex flex-row items-center w-[231px] h-[58px] gap-[15px]">
+				<div class="flex flex-row items-center w-57.75 h-14.5 gap-3.75">
 					<ProfileIcon
 							:src="profileImg"
 							:alt="profileAlt"
 							size-class="w-[58px] h-[58px]"
 					/>
-					<div class="flex flex-col justify-center items-start w-[158px] h-[48px] grow">
-                <span class="text-[#676767] dark:text-gray-400 text-[16px] leading-[19px]">
+					<div class="flex flex-col justify-center items-start w-39.5 h-12 grow">
+                <span class="text-[#676767] dark:text-gray-400 text-[16px] leading-4.75">
                   Logged in as
                 </span>
 
-						<span class="text-[#355AFF] text-[24px] leading-[29px]">
+						<span class="text-[#355AFF] text-[24px] leading-7.25">
                   @{{ username }}
                 </span>
 					</div>
 				</div>
 
 				<!-- Divider -->
-				<div class="w-full h-[2px] bg-[#C5C5C5] dark:bg-[#3C4583] mx-auto my-2 transition-colors duration-200"></div>
+				<div class="w-full h-0.5 bg-[#C5C5C5] dark:bg-[#3C4583] mx-auto my-2 transition-colors duration-200"></div>
 
 				<!-- Profile Link -->
 				<RouterLink to="/profile">
-					<a class="flex flex-row items-center w-[231px] gap-[10px] p-2 -ml-2 rounded-md
+					<a class="flex flex-row items-center w-57.75 gap-2.5 p-2 -ml-2 rounded-md
             text-gray-900 dark:text-white
             hover:bg-gray-100 dark:hover:bg-[#1E1E1E] hover:text-[#355AFF] dark:hover:text-[#355AFF]
             transition-colors duration-200 cursor-pointer">
@@ -64,7 +64,7 @@ const props = defineProps({
 				</RouterLink>
 
 				<!-- Settings Link -->
-				<a class="flex flex-row items-center w-[231px] gap-[10px] p-2 -ml-2 rounded-md
+				<a class="flex flex-row items-center w-57.75 gap-2.5 p-2 -ml-2 rounded-md
             text-gray-900 dark:text-white
             hover:bg-gray-100 dark:hover:bg-[#1E1E1E] hover:text-[#355AFF] dark:hover:text-[#355AFF]
             transition-colors duration-200 cursor-pointer">
@@ -76,16 +76,16 @@ const props = defineProps({
 				</a>
 				
 				<!-- Divider -->
-				<div class="w-full h-[2px] bg-[#C5C5C5] dark:bg-[#3C4583] mx-auto my-2 transition-colors duration-200"></div>
+				<div class="w-full h-0.5 bg-[#C5C5C5] dark:bg-[#3C4583] mx-auto my-2 transition-colors duration-200"></div>
 
 				<div class="w-full"><DarkModeSlider/></div>
 
 				<!-- Divider -->
-				<div class="w-full h-[2px] bg-[#C5C5C5] dark:bg-[#3C4583] mx-auto my-2 transition-colors duration-200"></div>
+				<div class="w-full h-0.5 bg-[#C5C5C5] dark:bg-[#3C4583] mx-auto my-2 transition-colors duration-200"></div>
 
 				<!-- Sign Out -->
 				<RouterLink to="/login">
-				<a class="flex flex-row items-center w-[231px] gap-[10px] p-2 -ml-2 rounded-md
+				<a class="flex flex-row items-center w-57.75 gap-2.5 p-2 -ml-2 rounded-md
             text-gray-900 dark:text-white
             hover:bg-gray-100 dark:hover:bg-[#1E1E1E] hover:text-[#355AFF] dark:hover:text-[#355AFF]
             transition-colors duration-200 cursor-pointer">
