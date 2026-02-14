@@ -76,7 +76,7 @@ const props = defineProps({
             </Carousel>
 
             <!-- Listing Information -->
-            <ListingInformation :listingData="props.listingData" :reviewsData="props.reviewsData">
+            <ListingInformation :listingData="props.listingData">
                 <template #listing-name>
                     {{ props.listingData.name }}
                 </template>

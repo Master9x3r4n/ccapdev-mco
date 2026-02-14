@@ -9,9 +9,6 @@ const props = defineProps({
             amenities: ['2 Bedrooms', '2 Bathrooms', '3 Dining Rooms', '10 Living Rooms'],
             contacts: ['Facebook', 'Instagram']
         }
-    },
-    reviewsData: {
-        type: Array
     }
 })
 
@@ -29,7 +26,7 @@ const props = defineProps({
             <div class="italic flex items-center">
                 <slot name="listing-address">Studio apartment - Awesome St., Barangay Big Love, Pasay City</slot>
             </div>
-        </div> 
+        </div>
 
         <!-- Profile -->
         <div class="flex gap-3">
