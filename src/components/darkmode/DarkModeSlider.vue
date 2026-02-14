@@ -22,11 +22,6 @@
         document.documentElement.classList.toggle('dark', enabled)
     })
 
-	// Callback function to toggle dark mode
-    const toggleDarkMode = () => {
-		darkMode.value = !darkMode.value;
-    }
-
 </script>
 
 <template>
